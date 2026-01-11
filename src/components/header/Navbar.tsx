@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
   }, [open]);
 
   return (
-    <div className="relative z-20">
+    <nav className="relative z-20">
       {/* Top bar */}
       <div className="flex justify-between lg:justify-around items-center px-5 py-2 bg-white w-full">
       <img src={feurLogo} alt="" className="w-8 sm:w-auto"/>
@@ -136,7 +136,7 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
