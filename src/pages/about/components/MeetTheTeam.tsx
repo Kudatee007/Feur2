@@ -6,12 +6,12 @@ const MeetTheTeam: React.FC = () => {
     <section className="bg-white py-20 px-4">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900">
+        <h2 className="text-2xl md:text-3xl font-semibold text-[#2F414F]">
           Meet the Team Behind Feur
         </h2>
 
         {/* Subheading */}
-        <p className="mt-3 max-w-2xl mx-auto text-slate-600 text-base md:text-lg">
+        <p className="mt-3 max-w-2xl mx-auto text-[#364153] text-base md:text-lg">
           We&apos;re a diverse group of innovators, technologists, and
           transportation experts united by our mission to transform mobility
           across Africa.

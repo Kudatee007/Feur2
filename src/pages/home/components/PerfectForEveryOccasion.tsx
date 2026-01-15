@@ -44,7 +44,7 @@ const occasions: Occasion[] = [
 
 const PerfectForEveryOccasion: React.FC = () => {
   return (
-    <section className="bg-[#FFFFFF] md:bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-16">
+    <section className="bg-[#FFFFFF] md:bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-10 pb-26">
       <div className="max-w-7xl mx-auto text-center">
         {/* Section pill */}
         <span className="inline-block mb-6 px-6 ld:px-12 py-3 rounded-full bg-[#2F414F] text-white text-xl lg:text-2xl font-medium">
@@ -62,7 +62,7 @@ const PerfectForEveryOccasion: React.FC = () => {
           {occasions.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl shadow-feur overflow-hidden text-left transition-transform duration-300 hover:-translate-y-1"
+              className="bg-white rounded-2xl shadow-feur overflow-hidden text-left transition-transform duration-300 hover:-translate-y-1 shadow-md"
             >
               {/* Image */}
               <div className="h-40 w-full overflow-hidden">
@@ -74,7 +74,7 @@ const PerfectForEveryOccasion: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="p-4">
+              <div className="p-4 lg:pb-14">
                 <h3 className="text-sm font-semibold text-slate-900">
                   {item.title}
                 </h3>
@@ -85,9 +85,11 @@ const PerfectForEveryOccasion: React.FC = () => {
             </div>
           ))}
         </div>
+
         <p className="max-w-2xl mx-auto text-[#364153] text-base md:text-xl mt-4">
         Ready to experience hassle-free transportation for any occasion?
         </p>
+
         {/* CTA */}
         <div className="mt-6">
           <button className="px-8 py-3 rounded-full bg-[#3894A3] text-white text-sm font-medium shadow-md hover:opacity-90 transition">

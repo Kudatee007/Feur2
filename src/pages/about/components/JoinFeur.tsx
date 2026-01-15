@@ -1,8 +1,9 @@
 import React from "react";
+import joinIcon from "../../../assets/icons/joinAbt.svg";
 
 const JoinFeur: React.FC = () => {
   return (
-    <section className="relative bg-[#263745] py-24 px-4 overflow-hidden">
+    <section className="relative bg-[#2F414F] py-24 px-4 overflow-hidden">
       {/* subtle background glow */}
       <div className="absolute inset-0">
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#2F8F9D]/20 rounded-full blur-3xl" />
@@ -12,22 +13,8 @@ const JoinFeur: React.FC = () => {
       <div className="relative max-w-4xl mx-auto text-center text-white">
         {/* Icon */}
         <div className="flex justify-center mb-6">
-          <div className="w-14 h-14 rounded-2xl bg-[#2F8F9D] flex items-center justify-center shadow-lg">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-white"
-            >
-              <path
-                d="M5 13l4 4L19 7"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <div className="w-20 h-16 rounded-2xl bg-[#2F8F9D] flex items-center justify-center shadow-lg">
+          <img src={joinIcon} alt="join" className="w-10 h-10"/>
           </div>
         </div>
 

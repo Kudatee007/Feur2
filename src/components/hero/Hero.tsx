@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({
         <h1 className="text-3xl sm:text-5xl lg:text-[80px] text-white font-bold lg:text-start leading-10 sm:leading-[60px] lg:leading-[90px]">
           {title}
         </h1>
-        <p className="text-white text-lg sm:text-2xl lg:text-[40px] font-normal lg:text-start">
+        <p className="text-white text-lg sm:text-2xl lg:text-4xl font-normal lg:text-start mb-10 leading-8 lg:leading-12">
           {subtitle}
         </p>
         {buttonText && (
@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({
       <img
         src={image}
         alt={imageAlt}
-        className="pt-6 w-[340px] sm:w-[584px] sm:h-96 rounded-xl"
+        className="pt-6 w-full max-w-[340px] sm:max-w-[584px] sm:h-96 rounded-xl"
       />
     </section>
   );

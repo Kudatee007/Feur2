@@ -51,7 +51,7 @@ function InfoCard({ icon, title, main, sub }: InfoCardProps) {
   return (
     <div className="bg-white rounded-xl border border-slate-100 shadow-lg p-6 text-center transition hover:shadow-xl">
       {/* Icon */}
-      <div className="mx-auto mb-4 w-12 h-12 rounded-xl bg-teal-600/90 flex items-center justify-center text-white shadow-md">
+      <div className="mx-auto mb-4 w-14 h-12 rounded-xl bg-gradient-to-br from-[#3894A3] to-[#056170] flex items-center justify-center text-white shadow-md">
         {icon}
       </div>
 

@@ -16,7 +16,7 @@ export default function ReadyToGetStarted() {
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Primary CTA */}
-          <button className="px-6 py-3 rounded-full bg-teal-600 text-white text-sm font-medium shadow-md hover:bg-teal-700 transition">
+          <button className="px-6 py-3 rounded-full bg-[#3894A3] text-white text-sm font-medium shadow-md hover:bg-teal-700 transition">
             Download App
           </button>
 

@@ -21,7 +21,7 @@ const OurStory: React.FC = () => {
               Born from a Simple Idea
             </h2>
 
-            <div className="mt-6 space-y-4 text-slate-600 text-base leading-relaxed lg:max-w-xl">
+            <div className="mt-6 space-y-4 text-[#364153] text-base leading-relaxed lg:max-w-xl">
               <p>
                 Feur started with a simple observation: too many car owners were
                 hesitant to enjoy social events because they couldn&apos;t drive
@@ -69,7 +69,7 @@ const OurStory: React.FC = () => {
 
               <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
 
-              <p className="text-white/90 text-sm md:text-base leading-relaxed">
+              <p className="text-white text-sm md:text-base leading-relaxed">
                 To become Africa’s most trusted mobility platform — where every
                 car owner has seamless access to professional drivers, and every
                 driver has the opportunity to build a thriving career in a safe,
@@ -87,7 +87,7 @@ const OurStory: React.FC = () => {
 
               <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
 
-              <p className="text-white/90 text-sm md:text-base leading-relaxed">
+              <p className="text-white text-sm md:text-base leading-relaxed">
                 To revolutionize personal mobility across Africa by providing
                 instant access to professional, verified drivers — empowering
                 car owners with freedom, safety, and convenience while creating

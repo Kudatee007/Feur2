@@ -43,8 +43,8 @@ const DownloadFeur: React.FC = () => {
 
             {/* Description */}
             <p className="mt-4 max-w-xl mx-auto lg:mx-0 text-white/90 text-base md:text-lg leading-relaxed">
-              Available on iOS and Android. Get started in minutes and experience
-              the convenience of having a professional driver at your
+              Available on iOS and Android. Get started in minutes and
+              experience the convenience of having a professional driver at your
               fingertips.
             </p>
 
@@ -52,16 +52,18 @@ const DownloadFeur: React.FC = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-black text-white shadow-md hover:opacity-90 transition">
                 <Apple className="w-5 h-5" />
-                <span className="text-sm font-medium">
-                  Download on the App Store
-                </span>
+                <div className="flex flex-col leading-tight text-start">
+                  <span className="text-xs font-normal">Download on the</span>
+                  <span className="text-xl font-normal">App Store</span>
+                </div>
               </button>
 
               <button className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-black text-white shadow-md hover:opacity-90 transition">
                 <Play className="w-5 h-5" />
-                <span className="text-sm font-medium">
-                  Get it on Google Play
-                </span>
+                <div className="flex flex-col leading-tight text-start">
+                  <span className="text-xs font-normal">Get it on</span>
+                  <span className="text-xl font-normal">Google Play</span>
+                </div>
               </button>
             </div>
 
@@ -72,9 +74,7 @@ const DownloadFeur: React.FC = () => {
                   <p className="text-white text-lg font-semibold">
                     {item.value}
                   </p>
-                  <p className="text-white/80 text-xs mt-1">
-                    {item.label}
-                  </p>
+                  <p className="text-white/80 text-xs mt-1">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -83,12 +83,12 @@ const DownloadFeur: React.FC = () => {
           {/* RIGHT — Image */}
           <div className="flex justify-center lg:justify-end rounded-2xl bg-white/10 w-full sm:w-[320px] md:w-[360px] p-6">
             {/* <div className="relative w-[260px] sm:w-[320px] md:w-[360px]"> */}
-              {/* <div className="absolute inset-0 rounded-2xl bg-white/10 blur-xl" /> */}
-              <img
-                src={appPreview}
-                alt="Feur app preview"
-                className="w-44 sm:w-full h-auto"
-              />
+            {/* <div className="absolute inset-0 rounded-2xl bg-white/10 blur-xl" /> */}
+            <img
+              src={appPreview}
+              alt="Feur app preview"
+              className="w-44 sm:w-full h-auto"
+            />
             {/* </div> */}
           </div>
         </div>

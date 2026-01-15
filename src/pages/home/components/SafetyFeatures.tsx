@@ -49,7 +49,7 @@ const SafetyFeatures: React.FC = () => {
                   key={idx}
                   className="flex items-start gap-3 justify-start bg-white/50 px-4 py-2 rounded-lg"
                 >
-                  <CheckCircle className="w-5 h-5 text-[#3894A3] mt-0.5 shrink-0" />
+                     <CheckCircle className="w-5 h-5 text-[#3894A3] mt-0.5 shrink-0" />
                   <span className="text-slate-700 text-sm md:text-base text-start">
                     {item}
                   </span>

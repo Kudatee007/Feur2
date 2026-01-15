@@ -19,7 +19,7 @@ export default function ContactSection() {
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
-            <div className="mx-auto mb-4 w-12 h-12 rounded-xl bg-teal-600 flex items-center justify-center shadow-md">
+            <div className="mx-auto mb-4 w-14 h-12 rounded-xl bg-gradient-to-br from-[#3894A3] to-[#056170] flex items-center justify-center shadow-md">
               <Send className="text-white" size={20} />
             </div>
 
@@ -112,7 +112,7 @@ export default function ContactSection() {
               {/* Submit */}
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-full bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-sm font-medium transition shadow-md"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#3894A3] to-[#056170] hover:bg-teal-700 text-white px-8 py-3 text-sm font-medium transition shadow-md"
               >
                 <Send size={16} />
                 Submit

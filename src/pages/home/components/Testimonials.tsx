@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialCard = ({ item }: { item: Testimonial }) => (
-  <div className="relative bg-[#F9FCFD] rounded-2xl p-6 h-full flex flex-col">
+  <div className="relative bg-[#F9FCFD] rounded-2xl p-6 h-full flex flex-col shadow-md">
     {/* Author */}
     <div className="mb-4">
       <p className="font-medium text-slate-900 text-sm">{item.name}</p>
@@ -67,10 +67,10 @@ const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-900">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#2F414F]">
             What Our Customers Say
           </h2>
-          <p className="mt-3 text-slate-600 text-base md:text-lg">
+          <p className="mt-3 text-[#2F414F] text-base md:text-lg font-normal">
             Join thousands of satisfied customers across Africa who trust Feur
             for their daily and special journeys.
           </p>

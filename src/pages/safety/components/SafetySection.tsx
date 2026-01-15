@@ -1,4 +1,12 @@
+import { CheckCircle } from "lucide-react";
 import React from "react";
+import driverScreen from "../../../assets/images/driverScreen.svg"; 
+import realTimeTracking from "../../../assets/images/realTime.svg"; 
+import identityVerification from "../../../assets/images/passDriver.svg"; 
+import emergencyAssistance from "../../../assets/images/emergencyAssit.svg";
+import contactlessPayment from "../../../assets/images/contact-less.svg"; 
+import ratingsSystem from "../../../assets/images/dri-ver.svg"; 
+import insuranceProtection from "../../../assets/images/insureProtection.svg";
 
 type SafetyItem = {
   id: string;
@@ -16,7 +24,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "01",
     title: "Thorough Driver Screening",
-    image: "/images/driver-screening.png",
+    image: driverScreen,
     points: [
       "Comprehensive background checks including criminal records",
       "Valid driver’s license and professional certification",
@@ -27,34 +35,67 @@ const safetyItems: SafetyItem[] = [
   {
     id: "02",
     title: "Real-Time Trip Monitoring",
-    image: "/images/tracking.png",
+    image: realTimeTracking,
     points: [
-      "Live GPS tracking throughout every trip",
-      "Safe and efficient route optimization",
-      "Share trip details with trusted contacts",
-      "Automatic alerts for route deviations",
+      "GPS tracking for every trip with live location updates",
+      "Route optimization to ensure the safest and most efficient path",
+      "Ability to share trip details with friends and family in real-time",
+      "Automated alerts if a trip deviates from the expected route",
     ],
   },
   {
     id: "03",
     title: "Passenger & Driver Identity Verification",
-    image: "/images/identity.png",
+    image: identityVerification,
     points: [
-      "Mandatory ID verification for all users",
-      "Photo verification to match real identities",
-      "Two-factor authentication for added security",
-      "Regular re-verification to maintain trust",
+      "Mandatory ID verification for all platform users",
+      "Photo verification to match profiles with actual identity",
+      "Two-factor authentication for enhanced account security",
+      "Regular re-verification to maintain platform integrity",
     ],
   },
   {
     id: "04",
     title: "Emergency Assistance",
-    image: "/images/emergency.png",
+    image: emergencyAssistance,
     points: [
-      "One-tap in-app panic button",
-      "24/7 emergency response support",
-      "Real-time location sharing during emergencies",
-      "Dedicated safety team monitoring trips",
+      "In-app panic button with direct connection to emergency services",
+      "24/7 customer support team trained in crisis management",
+      "Automatic location sharing with authorities when emergency is activated",
+      "Dedicated safety team monitoring flagged trips in real-time",
+    ],
+  },
+  {
+    id: "05",
+    title: "Contactless & Affordable Payments",
+    image: contactlessPayment,
+    points: [
+      "End-to-end encrypted payment processing",
+      "Multiple payment options including mobile money and cards",
+      "No cash handling required, reducing robbery risk",
+      "Automated payment receipts for complete transparency",
+    ],
+  },
+  {
+    id: "06",
+    title: "Driver & Passenger Ratings System",
+    image: ratingsSystem,
+    points: [
+      "Mutual rating system to maintain accountability",
+      "Detailed trip reviews help identify and address concerns",
+      "Low-rated drivers are automatically flagged for review",
+      "Community-driven safety through shared feedback",
+    ],
+  },
+  {
+    id: "07",
+    title: "Insurance Protection",
+    image: insuranceProtection,
+    points: [
+      "Comprehensive insurance coverage for all trips",
+      "Comprehensive insurance coverage for all trips",
+      "Medical coverage in case of accidents during trips",
+      "Quick claims processing for peace of mind",
     ],
   },
 ];
@@ -89,7 +130,8 @@ const SafetyCard: React.FC<SafetyCardProps> = ({ item, reverse }) => {
           <ul className="space-y-3">
             {item.points.map((point, idx) => (
               <li key={idx} className="flex items-start gap-3 text-[#2F414F]/80">
-                <span className="mt-1 h-2 w-2 rounded-full bg-[#3894A3]" />
+                {/* <span className="mt-1 h-2 w-2 rounded-full bg-[#3894A3]" /> */}
+                <CheckCircle className="w-5 h-5 text-[#3894A3] mt-0.5 shrink-0" />
                 <span>{point}</span>
               </li>
             ))}

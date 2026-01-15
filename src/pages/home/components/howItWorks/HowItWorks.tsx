@@ -71,7 +71,7 @@ const StepItem: React.FC<{ step: Step; isLast?: boolean }> = ({ step }) => {
         <p className="text-[#2F414F] font-semibold text-[clamp(0.88rem,1vw,2rem)] leading-tight">
           {step.title}
         </p>
-        <p className="text-slate-400 text-[clamp(0.80rem,1vw,1.75rem)] mt-1">
+        <p className="text-[#4A5565] text-[clamp(0.80rem,1vw,1.75rem)] mt-2">
           {step.subtitle}
         </p>
       </div>
@@ -82,68 +82,72 @@ const StepItem: React.FC<{ step: Step; isLast?: boolean }> = ({ step }) => {
 const HowItWorks = () => {
   return (
     <div className="bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-10">
-         <div className="max-w-7xl mx-auto text-center">
-      <div className="">
-        <h2>HowItWorks</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-          <HowItWorksCard
-            src={step1Img}
-            step="01"
-            title="Download & Register"
-            txt="Download the Feur app and create your account to get started"
-          />
-          <HowItWorksCard
-            src={step2Img}
-            step="02"
-            title="Request a Driver"
-            txt="Choose your pick-up location and request a verified driver"
-          />
-          <HowItWorksCard
-            src={step3Img}
-            step="03"
-            title="Meet Your Driver"
-            txt="Meet your professional driver and enjoy a safe journey to your destination"
-          />
-          <HowItWorksCard
-            src={step4Img}
-            step="04"
-            title="Download & Register"
-            txt="Share your experience and rate your driver after your ride"
-          />
-        </div>
-      </div>
-
-      <div className="py-10 flex flex-col items-center gap-11">
-        <h3 className="bg-[#2F414F] px-5 py-3 rounded-full w-fit text-white text-xl font-semibold text-center">
-          Steps To Using Feur
-        </h3>
-
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-16 lg:gap-20 w-full">
-          <div className="relative">
-            {/* vertical guide line behind badges */}
-            <div className="absolute left-10 top-14 bottom-6 w-0.5">
-              <div className="h-full w-px bg-[#3894A3]" />
-            </div>
-
-            <div className="space-y-8 text-start">
-              {steps.map((s, idx) => (
-                <div key={s.id} className="relative">
-                  <StepItem step={s} isLast={idx === steps.length - 1} />
-                </div>
-              ))}
-            </div>
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="">
+          <div className="text-center mb-12 sm:mb-16">
+            <span className="mb-20 px-6 py-3 rounded-full bg-[#2F414F] text-white text-xl font-medium text-center">
+              How It Works
+            </span>
           </div>
 
-          <div>
-            <img
-              src={appMobile}
-              alt="mobile.svg"
-              // className="w-[150px] h-[250px] sm:w-auto sm:h-auto"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <HowItWorksCard
+              src={step1Img}
+              step="01"
+              title="Download & Register"
+              txt="Download the Feur app and create your account to get started"
+            />
+            <HowItWorksCard
+              src={step2Img}
+              step="02"
+              title="Request a Driver"
+              txt="Choose your pick-up location and request a verified driver"
+            />
+            <HowItWorksCard
+              src={step3Img}
+              step="03"
+              title="Meet Your Driver"
+              txt="Meet your professional driver and enjoy a safe journey to your destination"
+            />
+            <HowItWorksCard
+              src={step4Img}
+              step="04"
+              title="Download & Register"
+              txt="Share your experience and rate your driver after your ride"
             />
           </div>
         </div>
-      </div>
+
+        <div className="py-10 flex flex-col items-center gap-11">
+          <h3 className="bg-[#2F414F] px-6 py-3 rounded-full w-fit text-white text-xl font-semibold text-center">
+            Steps To Using Feur
+          </h3>
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-16 lg:gap-20 w-full">
+            <div className="relative">
+              {/* vertical guide line behind badges */}
+              <div className="absolute left-10 top-14 bottom-6 w-0.5">
+                <div className="h-full w-px bg-[#3894A3]" />
+              </div>
+
+              <div className="space-y-8 text-start">
+                {steps.map((s, idx) => (
+                  <div key={s.id} className="relative">
+                    <StepItem step={s} isLast={idx === steps.length - 1} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <img
+                src={appMobile}
+                alt="mobile.svg"
+                // className="w-[150px] h-[250px] sm:w-auto sm:h-auto"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

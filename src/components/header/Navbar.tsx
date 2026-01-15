@@ -1,33 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import feurLogo from "../../assets/images/feurLogo.svg";
 
-type MenuItem = {
-  id: number;
-  label: string;
-  primary?: boolean;
-};
+import { mainNav, mobileNav } from "../../config/navigation";
+import { scrollToSection } from "../../utils/scrollToSection";
 
-const menuItems: MenuItem[] = [
-  { id: 1, label: "Home" },
-  { id: 2, label: "About us" },
-  { id: 3, label: "Features" },
-  { id: 4, label: "Contact Us" },
-  { id: 5, label: "Download App", primary: true },
-];
-
-const navItems: MenuItem[] = [
-    { id: 1, label: "About Us" },
-    { id: 2, label: "Features" },
-    { id: 3, label: "Safety" },
-    { id: 4, label: "Contact Us" },
-  ];
-
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // Lock body scroll when menu is open
+
+  // lock body scroll
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -35,107 +20,81 @@ const Navbar: React.FC = () => {
     };
   }, [open]);
 
-  // Close on Escape key
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    if (open) document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [open]);
+  const handleNav = (path: string, sectionId?: string) => {
+    navigate(path);
+
+    if (sectionId) {
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    }
+  };
 
   return (
     <nav className="relative z-20">
       {/* Top bar */}
-      <div className="flex justify-between lg:justify-around items-center px-5 py-2 bg-white w-full">
-      <img src={feurLogo} alt="" className="w-8 sm:w-auto"/>
-          <ul className="hidden lg:flex lg:gap-12 text-[#2F414F] text-base">
-            {navItems.map((item) => {
-              return (
-                <li
-                  key={item.id}
-                  className=""
-                >
-                  {item.label}
-                </li>
-              );
-            })}
-          </ul>
+      <div className="flex justify-between lg:justify-around items-center px-5 py-2 bg-white">
+        <NavLink to="/">
+          <img src={feurLogo} alt="Feur logo" className="w-8 sm:w-auto" />
+        </NavLink>
 
-          <button className="bg-[#3894A3] text-white px-6 py-2 rounded-[10px] hidden lg:block">Download App</button>
+        <ul className="hidden lg:flex gap-12 text-[#2F414F]">
+          {mainNav.map((item) => (
+            <li key={item.id}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#3894A3] font-medium"
+                    : "hover:text-[#3894A3]"
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
 
         <button
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-          className="p-2 rounded-md hover:bg-gray-100 lg:hidden"
+          onClick={() => navigate("/download")}
+          className="hidden lg:block bg-[#3894A3] text-white px-6 py-2 rounded-lg"
         >
-          <RxHamburgerMenu className="text-[#2F414F] h-6 w-6" />
+          Download App
+        </button>
+
+        <button onClick={() => setOpen(true)} className="lg:hidden">
+          <RxHamburgerMenu size={24} />
         </button>
       </div>
 
-      {/* Overlay */}
-      <div
-        onClick={() => setOpen(false)}
-        className={`fixed inset-0 bg-black/30 transition-opacity duration-200 lg:hidden ${
-          open
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-        aria-hidden={!open}
-      />
-
-      {/* Sliding menu panel from top */}
-      <div
-        className={`fixed top-0 left-0 right-0 transform transition-transform duration-250 z-30 lg:hidden ${
-          open ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <div className="p-4 bg-white pb-16 shadow-md">
-          <div className="flex justify-between items-center mb-4">
-           <img src={feurLogo} alt="" />
-            <button
-              onClick={() => setOpen(false)}
-              aria-label="Close menu"
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
-              <MdClose className="text-[#2F414F] h-6 w-6" />
+      {/* Mobile menu */}
+      {open && (
+        <div className="fixed inset-0 bg-white z-30 p-4">
+          <div className="flex justify-between mb-6">
+            <img src={feurLogo} alt="Feur logo" />
+            <button onClick={() => setOpen(false)}>
+              <MdClose size={24} />
             </button>
           </div>
 
-          {/* Menu items with simple stagger */}
           <ul className="space-y-3">
-            {menuItems.map((item, i) => {
-              const bg = item.primary
-                ? "bg-[#3894A3] text-white"
-                : "bg-[#F1F9FB] text-[#2F414F]";
-              const delay = `${i * 75}ms`; // tweak to speed/slow the stagger
-
-              return (
-                <li
-                  key={item.id}
-                  style={{
-                    transition: "opacity 250ms ease, transform 250ms ease",
-                    transitionDelay: delay,
-                    opacity: open ? 1 : 0,
-                    transform: open ? "translateY(0)" : "translateY(-6px)",
-                  }}
+            {mobileNav.map((item) => (
+              <li key={item.id}>
+                <button
+                  onClick={() => handleNav(item.path, item.sectionId)}
+                  className={`w-full text-left px-4 py-3 rounded-xl ${
+                    item.primary
+                      ? "bg-[#3894A3] text-white"
+                      : "bg-[#F1F9FB]"
+                  }`}
                 >
-                  <button
-                    onClick={() => {
-                      // close and do action (navigate) here
-                      setOpen(false);
-                      // e.g., navigate('/about') if using router
-                    }}
-                    className={`w-full text-left px-4 py-3 rounded-[14px] ${bg}`}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              );
-            })}
+                  {item.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

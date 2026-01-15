@@ -21,11 +21,21 @@ const GpsIcon = () => (
 const WhyChooseFeur = () => {
   return (
     <div className=" bg-[#ffffff] px-5 lg:px-22 xl:px-36 py-10">
+      <div className="text-center">
+        <span className="px-6 py-3 rounded-full bg-[#2F414F] text-white text-xl font-medium text-center">
+          Why Choose Feur?
+        </span>
+        <p className="text-lg lg:text-xl text-[#364153] font-normal mt-4">
+          Experience the future of personal mobility with features designed for
+          your convenience and safety.
+        </p>
+      </div>
+
       <div className="sm:p-6">
         <FeatureCard
           imageSrc={featureImg1}
           imageAlt="Phone showing route in car"
-          index="03"
+          index="01"
           pill="Feature 1"
           title="Flexible Booking"
           description="Book a driver whenever you need one—instantly or schedule ahead for any occasion."
@@ -36,7 +46,7 @@ const WhyChooseFeur = () => {
         <FeatureCard
           imageSrc={featureImg1}
           imageAlt="Phone showing route in car"
-          index="04"
+          index="02"
           pill="Feature 2"
           title="Professional Drivers"
           description="All drivers are verified, trained, and professional—giving you peace of mind."

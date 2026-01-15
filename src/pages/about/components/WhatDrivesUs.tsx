@@ -1,10 +1,22 @@
 import React from "react";
+import flexImg from "../../../assets/images/flexibility.svg";
+import reliabImg from "../../../assets/images/reliability.svg";
+import innovImg from "../../../assets/images/innovation.svg";
+import customerImg from "../../../assets/images/customer-centric.svg";
+import sustainImg from "../../../assets/images/sustainability.svg";
+import safetyImg from "../../../assets/images/safety.svg";
+import flexIcon from "../../../assets/icons/flexIcon.svg";
+import reliaIcon from "../../../assets/icons/reliaIcon.svg";
+import innovIcon from "../../../assets/icons/innoIcon.svg";
+import customerIcon from "../../../assets/icons/customerIcon.svg";
+import sustainIcon from "../../../assets/icons/sustainIcon.svg";
+import safetyIcon from "../../../assets/icons/safetyIcon.svg";
 
 type ValueItem = {
   title: string;
   description: string;
   image: string;
-  icon: React.ReactNode;
+  icon: string;
 };
 
 const values: ValueItem[] = [
@@ -12,43 +24,43 @@ const values: ValueItem[] = [
     title: "Flexibility",
     description:
       "Adapting to your schedule and needs, whenever and wherever you need a driver.",
-    image: "/images/values-flexibility.jpg",
-    icon: "⚡",
+    image: flexImg,
+    icon: flexIcon,
   },
   {
     title: "Reliability",
     description:
       "Professional drivers you can count on for safe, timely service every time.",
-    image: "/images/values-reliability.jpg",
-    icon: "🛡️",
+    image: reliabImg,
+    icon: reliaIcon,
   },
   {
     title: "Innovation",
     description:
       "Leading Africa’s mobility revolution with cutting-edge technology.",
-    image: "/images/values-innovation.jpg",
-    icon: "💡",
+    image: innovImg,
+    icon: innovIcon,
   },
   {
     title: "Customer-Centric",
     description:
       "Your satisfaction drives everything we do, from features to support.",
-    image: "/images/values-customer.jpg",
-    icon: "👥",
+    image: customerImg,
+    icon: customerIcon,
   },
   {
     title: "Sustainability",
     description:
       "Committed to reducing environmental impact through smart solutions.",
-    image: "/images/values-sustainability.jpg",
-    icon: "♻️",
+    image: sustainImg,
+    icon: sustainIcon,
   },
   {
     title: "Safety",
     description:
       "Your security is our top priority with verified drivers and real-time tracking.",
-    image: "/images/values-safety.jpg",
-    icon: "❤️",
+    image: safetyImg,
+    icon: safetyIcon,
   },
 ];
 
@@ -62,7 +74,7 @@ const WhatDrivesUs: React.FC = () => {
             What Drives Us
           </span>
 
-          <p className="text-slate-600 text-base md:text-xl">
+          <p className="text-[#364153] text-base md:text-xl">
             Our core values shape every decision we make and every interaction
             we have.
           </p>
@@ -84,17 +96,21 @@ const WhatDrivesUs: React.FC = () => {
                 />
 
                 {/* Icon */}
-                <div className="absolute top-4 left-4 w-10 h-10 rounded-xl bg-[#2F8F9D] text-white flex items-center justify-center shadow-md">
-                  <span className="text-sm">{item.icon}</span>
+                <div className="absolute top-4 left-4 w-18 h-14 rounded-xl bg-[#2F8F9D] text-white flex items-center justify-center shadow-md">
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-6 h-6 object-cover"
+                  />
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-sm font-semibold text-slate-900">
+                <h3 className="text-sm font-semibold text-[#2F414F]">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-sm text-[#4A5565] leading-relaxed">
                   {item.description}
                 </p>
               </div>
