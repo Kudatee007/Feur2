@@ -1,4 +1,3 @@
-import React from 'react'
 import HowItWorks from './components/howItWorks/HowItWorks'
 import WhyChooseFeur from './components/WhyChooseFeur/WhyChooseFeur'
 import PerfectForEveryOccasion from './components/PerfectForEveryOccasion'

@@ -1,4 +1,3 @@
-import React from "react";
 import FeatureCard from "./components/FeatureCard";
 import featureImg1 from "../../../../assets/images/featureImg1.svg";
 
