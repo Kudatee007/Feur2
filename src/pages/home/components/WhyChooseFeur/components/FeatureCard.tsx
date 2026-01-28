@@ -3,11 +3,11 @@ import React from "react";
 export type FeatureCardProps = {
   imageSrc: string;
   imageAlt?: string;
+  imageIcon?: string;
   index?: number | string;
   pill?: string;
   title: string;
   description?: React.ReactNode;
-  imageOverlay?: React.ReactNode;
   reverse?: boolean;
   className?: string;
   onClick?: () => void;
@@ -20,7 +20,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   pill,
   title,
   description,
-  imageOverlay,
+  imageIcon,
   reverse = false,
   className = "",
   onClick,
@@ -79,17 +79,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           </div>
         )}
 
-        {/* Image overlay icon */}
-        {imageOverlay && (
+        {/* Image icon */}
           <div className="absolute right-4 top-4">
             <div
-              className="w-10 h-10 rounded-lg bg-white/90 flex items-center justify-center shadow"
+              className="rounded-lg bg-white/90 flex items-center justify-center shadow p-1"
               aria-hidden
             >
-              {imageOverlay}
+              <img src={imageIcon} alt="feature-icon" className="w-14 h-14"/>
             </div>
           </div>
-        )}
       </div>
 
       {/* Text */}

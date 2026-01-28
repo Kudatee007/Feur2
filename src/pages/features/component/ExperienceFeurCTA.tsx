@@ -1,10 +1,12 @@
+import experienceIcon from "../../../assets/icons/experienceIcon.svg"
+
 const ExperienceFeurCTA = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[#2F8F9D] to-[#1F6F7A] py-20">
+    <section className="relative bg-linear-to-br from-[#2F8F9D] to-[#1F6F7A] py-20">
       <div className="max-w-4xl mx-auto px-5 text-center text-white">
         {/* Icon */}
-        <div className="mx-auto mb-6 w-14 h-14 flex items-center justify-center rounded-xl bg-white/20 backdrop-blur">
-          ⚡
+        <div className="mx-auto mb-6 w-16 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#1E293B] to-[#0F172A] shadow-black/40 backdrop-blur">
+          <img src={experienceIcon} alt="experience" className="w-9 h-9"/>
         </div>
 
         {/* Heading */}

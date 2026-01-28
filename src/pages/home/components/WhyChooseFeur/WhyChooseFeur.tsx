@@ -1,21 +1,12 @@
 import FeatureCard from "./components/FeatureCard";
 import featureImg1 from "../../../../assets/images/featureImg1.svg";
-
-const GpsIcon = () => (
-  <svg
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden
-  >
-    <path
-      d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"
-      fill="#0f172a"
-    />
-  </svg>
-);
+import featureImg2 from "../../../../assets/images/featureImg2.svg";
+import featureImg3 from "../../../../assets/images/featureImg3.svg";
+import featureImg4 from "../../../../assets/images/featureImg4.svg";
+import featureIcon1 from "../../../../assets/icons/featureIcon1.svg"
+import featureIcon2 from "../../../../assets/icons/featureIcon2.svg"
+import featureIcon3 from "../../../../assets/icons/featureIcon3.svg"
+import featureIcon4 from "../../../../assets/icons/featureIcon4.svg"
 
 const WhyChooseFeur = () => {
   return (
@@ -38,40 +29,40 @@ const WhyChooseFeur = () => {
           pill="Feature 1"
           title="Flexible Booking"
           description="Book a driver whenever you need one—instantly or schedule ahead for any occasion."
-          imageOverlay={<GpsIcon />}
+          imageIcon={featureIcon1}
         />
 
         <div className="mt-10" />
         <FeatureCard
-          imageSrc={featureImg1}
+          imageSrc={featureImg2}
           imageAlt="Phone showing route in car"
           index="02"
           pill="Feature 2"
           title="Professional Drivers"
           description="All drivers are verified, trained, and professional—giving you peace of mind."
-          imageOverlay={<GpsIcon />}
+          imageIcon={featureIcon2}
           reverse
         />
 
         <FeatureCard
-          imageSrc={featureImg1}
+          imageSrc={featureImg3}
           imageAlt="Phone showing route in car"
           index="03"
           pill="Feature 3"
           title="Real-Time Tracking"
           description="Know exactly where your driver is with live GPS tracking and ETA updates."
-          imageOverlay={<GpsIcon />}
+          imageIcon={featureIcon3}
         />
 
         <div className="mt-10" />
         <FeatureCard
-          imageSrc={featureImg1}
+          imageSrc={featureImg4}
           imageAlt="Phone showing route in car"
           index="04"
           pill="Feature 4"
           title="Negotiable Pricing"
           description="Negotiable pricing with quality service at fair rates."
-          imageOverlay={<GpsIcon />}
+          imageIcon={featureIcon4}
           reverse
         />
       </div>

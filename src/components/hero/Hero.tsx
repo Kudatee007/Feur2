@@ -35,17 +35,17 @@ const Hero: React.FC<HeroProps> = ({
         backgroundColor,
       }}
     >
-      <div className="space-y-6 flex flex-col items-center lg:items-start lg:max-w-4xl">
-        <h1 className="text-3xl sm:text-5xl lg:text-[80px] text-white font-bold lg:text-start leading-10 sm:leading-[60px] lg:leading-[90px]">
+      <div className="space-y-6 flex flex-col items-center lg:items-start lg:max-w-4xl px-4">
+        <h1 className="text-4xl sm:text-5xl lg:text-[80px] text-white font-bold lg:text-start leading-10 sm:leading-[60px] lg:leading-[90px]">
           {title}
         </h1>
-        <p className="text-white text-lg sm:text-2xl lg:text-4xl font-normal lg:text-start mb-10 leading-8 lg:leading-12">
+        <p className="text-white text-xl sm:text-2xl lg:text-4xl font-normal lg:text-start mb-4 leading-8 lg:leading-12">
           {subtitle}
         </p>
         {buttonText && (
           <button
             onClick={onButtonClick}
-            className="text-white bg-[#3894A3] h-14 rounded-full flex items-center justify-center gap-2 w-full max-w-[338px] hover:bg-[#327d8a] transition-colors"
+            className="text-white bg-[#3894A3] mt-4 h-14 rounded-full flex items-center justify-center gap-2 w-full max-w-[338px] hover:bg-[#327d8a] transition-colors"
           >
             {buttonIcon}
             <span>{buttonText}</span>
@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({
       <img
         src={image}
         alt={imageAlt}
-        className="pt-6 w-full max-w-[340px] sm:max-w-[584px] sm:h-96 rounded-xl"
+        className="mt-4 w-[260px] max-w-[340px] sm:max-w-[584px] sm:h-96 rounded-xl"
       />
     </section>
   );

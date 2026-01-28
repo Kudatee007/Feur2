@@ -1,6 +1,5 @@
 import {
   Facebook,
-  Twitter,
   Linkedin,
   Instagram,
   Mail,
@@ -8,6 +7,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
 
 import { footerNav } from "../../config/navigation";
 import { scrollToSection } from "../../utils/scrollToSection";
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 
             {/* Socials */}
             <div className="flex gap-3 mt-6">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
+              {[Facebook, FaXTwitter, Linkedin, Instagram].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
                   className="flex items-center gap-3 hover:text-white transition"
                 >
                   <Phone className="w-4 h-4 text-[#2F8F9D]" />
-                  +234 707 622 048
+                  +234 707 622 6048
                 </a>
               </li>
 
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom row */}
         <div className="mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-          <p>© 2025 Feur. All rights reserved.</p>
+          <p>© 2026 Feur. All rights reserved.</p>
 
           <div className="flex gap-6">
             <Link to="/privacy">Privacy Policy</Link>

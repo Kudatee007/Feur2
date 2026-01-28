@@ -18,24 +18,24 @@ const MeetTheTeam: React.FC = () => {
         </p>
 
         {/* Image + Quote */}
-        <div className="mt-12 flex justify-center">
-          <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-feur">
+        {/* <div className="mt-12 flex justify-center">
+          <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-feur"> */}
             {/* Image */}
             <img
               src={teamImage}
               alt="Feur team collaboration"
-              className="w-full h-auto object-cover"
+              className="w-full h-fullrounded-2xl"
             />
 
             {/* Quote overlay */}
-            <div className="absolute inset-x-0 bottom-0 bg-black/50 backdrop-blur-sm px-6 py-4">
+            {/* <div className="absolute inset-x-0 bottom-0 bg-black/10  px-6 py-4">
               <p className="text-white text-sm md:text-base italic leading-relaxed">
                 “We&apos;re not just building an app, we&apos;re building a
                 movement that&apos;s changing how Africa moves.”
               </p>
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div>
+        </div> */}
       </div>
     </section>
   );

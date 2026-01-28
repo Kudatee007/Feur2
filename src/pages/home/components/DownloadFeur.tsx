@@ -2,11 +2,11 @@ import React from "react";
 import { Apple, Play } from "lucide-react";
 import appPreview from "../../../assets/images/app-preview.png";
 
-const stats = [
-  { value: "50000+", label: "Active Users" },
-  { value: "1000+", label: "Verified Drivers" },
-  { value: "4.8★", label: "App Rating" },
-];
+// const stats = [
+//   { value: "50000+", label: "Active Users" },
+//   { value: "1000+", label: "Verified Drivers" },
+//   { value: "4.8★", label: "App Rating" },
+// ];
 
 const DownloadFeur: React.FC = () => {
   return (
@@ -68,7 +68,7 @@ const DownloadFeur: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="mt-10 flex justify-center lg:justify-start gap-8">
+            {/* <div className="mt-10 flex justify-center lg:justify-start gap-8">
               {stats.map((item, idx) => (
                 <div key={idx} className="text-center">
                   <p className="text-white text-lg font-semibold">
@@ -77,13 +77,11 @@ const DownloadFeur: React.FC = () => {
                   <p className="text-white/80 text-xs mt-1">{item.label}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT — Image */}
           <div className="flex justify-center lg:justify-end rounded-2xl bg-white/10 w-full sm:w-[320px] md:w-[360px] p-6">
-            {/* <div className="relative w-[260px] sm:w-[320px] md:w-[360px]"> */}
-            {/* <div className="absolute inset-0 rounded-2xl bg-white/10 blur-xl" /> */}
             <img
               src={appPreview}
               alt="Feur app preview"

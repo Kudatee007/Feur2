@@ -5,10 +5,10 @@ import missionIcon from "../../../assets/icons/missionIcon.svg";
 
 const OurStory: React.FC = () => {
   return (
-    <section className="bg-[#F1F9FB] py-20 px-4">
+    <section className="bg-[#F1F9FB]">
       <div className="max-w-7xl mx-auto">
         {/* STORY */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center justify-center">
+        <div className="flex flex-col lg:flex-row gap-16 items-center justify-center px-4 py-16">
           {/* Left — Text */}
           <div>
             <div className="text-center lg:text-left mb-6">
@@ -51,7 +51,7 @@ const OurStory: React.FC = () => {
         </div>
 
         {/* MISSION & VISION */}
-        <div className="mt-24">
+        <div className="mt-24 bg-white px-4 py-16">
           <div className="text-center mb-12">
             <span className="inline-block mb-4 px-6 py-3 sm:px-18 rounded-full bg-[#2F414F] text-white text-xl font-medium">
               Our Mission & Vision
@@ -59,28 +59,10 @@ const OurStory: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Vision */}
-            <div className="bg-[#2F8F9D] text-white rounded-2xl p-8 shadow-feur">
-              <div className="mb-8">
-                <span className="inline-flex items-center justify-center py-1 px-4 rounded-xl bg-linear-to-b from-[#2F414F] to-[#000E1C] shadow-feur">
-                  <img src={visionIcon} alt="" className="w-12 h-12" />
-                </span>
-              </div>
-
-              <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
-
-              <p className="text-white text-sm md:text-base leading-relaxed">
-                To become Africa’s most trusted mobility platform — where every
-                car owner has seamless access to professional drivers, and every
-                driver has the opportunity to build a thriving career in a safe,
-                supportive ecosystem.
-              </p>
-            </div>
-
             {/* Mission */}
             <div className="bg-[#2F414F] text-white rounded-2xl p-8 shadow-feur">
               <div className="mb-8">
-                <span className="inline-flex items-center justify-center py-1 px-4 rounded-xl bg-linear-to-b from-[#3894A3] to-[#056170] shadow-feur">
+                <span className="inline-flex items-center justify-center pt-2 px-3 rounded-xl bg-linear-to-b from-[#3894A3] to-[#056170] shadow-feur">
                   <img src={missionIcon} alt="" className="w-12 h-12" />
                 </span>
               </div>
@@ -92,6 +74,24 @@ const OurStory: React.FC = () => {
                 instant access to professional, verified drivers — empowering
                 car owners with freedom, safety, and convenience while creating
                 sustainable employment opportunities for skilled drivers.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div className="bg-[#2F8F9D] text-white rounded-2xl p-8 shadow-feur">
+              <div className="mb-8">
+                <span className="inline-flex items-center justify-center pt-2 px-3 rounded-xl bg-linear-to-b from-[#2F414F] to-[#000E1C] shadow-feur">
+                  <img src={visionIcon} alt="" className="w-12 h-12" />
+                </span>
+              </div>
+
+              <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
+
+              <p className="text-white text-sm md:text-base leading-relaxed">
+                To become Africa’s most trusted mobility platform — where every
+                car owner has seamless access to professional drivers, and every
+                driver has the opportunity to build a thriving career in a safe,
+                supportive ecosystem.
               </p>
             </div>
           </div>

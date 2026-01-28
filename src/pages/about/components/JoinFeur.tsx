@@ -3,7 +3,7 @@ import joinIcon from "../../../assets/icons/joinAbt.svg";
 
 const JoinFeur: React.FC = () => {
   return (
-    <section className="relative bg-[#2F414F] py-24 px-4 overflow-hidden">
+    <section className="relative bg-[#3894A3] py-24 px-4 overflow-hidden">
       {/* subtle background glow */}
       <div className="absolute inset-0">
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#2F8F9D]/20 rounded-full blur-3xl" />
@@ -13,7 +13,7 @@ const JoinFeur: React.FC = () => {
       <div className="relative max-w-4xl mx-auto text-center text-white">
         {/* Icon */}
         <div className="flex justify-center mb-6">
-          <div className="w-20 h-16 rounded-2xl bg-[#2F8F9D] flex items-center justify-center shadow-lg">
+          <div className="w-20 h-16 rounded-2xl bg-[#2F414F] flex items-center justify-center shadow-lg">
           <img src={joinIcon} alt="join" className="w-10 h-10"/>
           </div>
         </div>
@@ -36,7 +36,7 @@ const JoinFeur: React.FC = () => {
             Download the App
           </button>
 
-          <button className="px-8 py-3 rounded-full border border-white/40 text-white text-sm font-medium hover:bg-white/10 transition">
+          <button className="px-8 py-3 rounded-full border border-white text-white text-sm font-medium hover:bg-white/10 transition">
             Become a Driver
           </button>
         </div>

@@ -1,4 +1,6 @@
-import { ShieldCheck, MapPin, Bell } from "lucide-react";
+import verifiedIcon from "../../../assets/icons/verifiedIcon.svg";
+import trackingIcon from "../../../assets/icons/locationIcon.svg";
+import emergencyIcon from "../../../assets/icons/emergencyIcon.svg";
 
 type SafetyItem = {
   icon: React.ReactNode;
@@ -14,19 +16,19 @@ type Props = {
 
 const safetyItems: SafetyItem[] = [
   {
-    icon: <ShieldCheck className="w-6 h-6 text-white" />,
+    icon: <img src={verifiedIcon} alt="verified-icons" className="w-8 h-8 text-white" />,
     title: "Verified Drivers",
     description:
       "All drivers undergo comprehensive background checks, including criminal records, driving history, and professional references.",
   },
   {
-    icon: <MapPin className="w-6 h-6 text-white" />,
+    icon: <img src={trackingIcon} alt="tracking-icon" className="w-8 h-8 text-white" />,
     title: "Real-Time Tracking",
     description:
       "Track your trip live and share your location with trusted contacts. Our GPS tracking ensures you're always connected.",
   },
   {
-    icon: <Bell className="w-6 h-6 text-white" />,
+    icon: <img src={emergencyIcon} alt="emergency-icon" className="w-8 h-8 text-white"/>,
     title: "Emergency Support",
     description:
       "24/7 emergency assistance with one-tap access. Our support team is always ready to respond to safety concerns.",
@@ -36,7 +38,7 @@ const safetyItems: SafetyItem[] = [
 function SafetyCard({ icon, title, description }: Props) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-      <div className="w-12 h-12 rounded-lg bg-[#3894A3] flex items-center justify-center mb-4">
+      <div className="w-14 h-10 rounded-lg bg-[#3894A3] flex items-center justify-center mb-4">
         {icon}
       </div>
 

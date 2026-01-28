@@ -92,7 +92,7 @@ const WhatDrivesUs: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full min-h-[160px] object-cover"
                 />
 
                 {/* Icon */}
