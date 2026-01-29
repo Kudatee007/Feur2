@@ -4,6 +4,7 @@ import OtherWaysToReachUs from "./components/OtherWaysToReachUs";
 import ReadyToGetStarted from "./components/ReadyToGetStarted";
 import Hero from "../../components/hero/Hero";
 import aboutImage from "../../assets/images/aboutImage.svg";
+import contactHeroBg from "../../assets/images/contactUsHeroBg.svg";
 
 export default function ContactSection() {
   return (
@@ -12,6 +13,7 @@ export default function ContactSection() {
         title="Contact Us"
         subtitle="Speak to a member of our team. We're here to help answer any questions you may have about Feur."
         image={aboutImage}
+        backgroundImage={contactHeroBg}
       />
       <ContactInfo />
 

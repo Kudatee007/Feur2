@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
 
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-[#2F8F9D]" />
-                Lagos, Nigeria
+                Surulere, Lagos, Nigeria
               </li>
             </ul>
           </div>

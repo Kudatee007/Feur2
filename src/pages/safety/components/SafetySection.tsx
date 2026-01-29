@@ -7,12 +7,20 @@ import emergencyAssistance from "../../../assets/images/emergencyAssit.svg";
 import contactlessPayment from "../../../assets/images/contact-less.svg";
 import ratingsSystem from "../../../assets/images/dri-ver.svg";
 import insuranceProtection from "../../../assets/images/insureProtection.svg";
+import safetyIcon1D from "../../../assets/icons/safetyIcon1D.svg"
+import safetyIcon2D from "../../../assets/icons/safetyIcon2D.svg"
+import safetyIcon3D from "../../../assets/icons/safetyIcon3D.svg"
+import safetyIcon4D from "../../../assets/icons/safetyIcon4D.svg"
+import safetyIcon5D from "../../../assets/icons/safetyIcon5D.svg"
+import safetyIcon6D from "../../../assets/icons/safetyIcon6D.svg"
+import safetyIcon7D from "../../../assets/icons/safetyIcon7D.svg"
 
 type SafetyItem = {
   id: string;
   title: string;
   points: string[];
   image: string;
+  icon: string;
 };
 
 type SafetyCardProps = {
@@ -31,6 +39,7 @@ const safetyItems: SafetyItem[] = [
       "Minimum of 3 years verified driving experience",
       "In-depth interviews to assess reliability",
     ],
+    icon: safetyIcon1D,
   },
   {
     id: "02",
@@ -42,6 +51,7 @@ const safetyItems: SafetyItem[] = [
       "Ability to share trip details with friends and family in real-time",
       "Automated alerts if a trip deviates from the expected route",
     ],
+    icon: safetyIcon2D,
   },
   {
     id: "03",
@@ -53,6 +63,7 @@ const safetyItems: SafetyItem[] = [
       "Two-factor authentication for enhanced account security",
       "Regular re-verification to maintain platform integrity",
     ],
+    icon: safetyIcon3D,
   },
   {
     id: "04",
@@ -64,6 +75,7 @@ const safetyItems: SafetyItem[] = [
       "Automatic location sharing with authorities when emergency is activated",
       "Dedicated safety team monitoring flagged trips in real-time",
     ],
+    icon: safetyIcon4D,
   },
   {
     id: "05",
@@ -75,6 +87,7 @@ const safetyItems: SafetyItem[] = [
       "No cash handling required, reducing robbery risk",
       "Automated payment receipts for complete transparency",
     ],
+    icon: safetyIcon5D,
   },
   {
     id: "06",
@@ -86,6 +99,7 @@ const safetyItems: SafetyItem[] = [
       "Low-rated drivers are automatically flagged for review",
       "Community-driven safety through shared feedback",
     ],
+    icon: safetyIcon6D,
   },
   {
     id: "07",
@@ -97,6 +111,7 @@ const safetyItems: SafetyItem[] = [
       "Medical coverage in case of accidents during trips",
       "Quick claims processing for peace of mind",
     ],
+    icon: safetyIcon7D,
   },
 ];
 
@@ -118,6 +133,9 @@ const SafetyCard: React.FC<SafetyCardProps> = ({ item, reverse }) => {
             alt={item.title}
             className="h-full w-full object-cover"
           />
+          <div className="absolute bottom-4 right-4 z-10 bg-white p-2 rounded-lg shadow-md">
+            <img src={item.icon} alt="" className="w-16 h-14"/>
+          </div>
         </div>
       </div>
 

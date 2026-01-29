@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({
       <img
         src={image}
         alt={imageAlt}
-        className="mt-4 w-[260px] max-w-[340px] sm:max-w-[584px] sm:h-96 rounded-xl"
+        className="mt-4 w-full max-w-[340px] sm:w-full sm:min-w-[490px] sm:h-full rounded-xl"
       />
     </section>
   );

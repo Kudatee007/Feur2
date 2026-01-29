@@ -6,6 +6,7 @@ import Testimonials from './components/Testimonials'
 import DownloadFeur from './components/DownloadFeur'
 import Hero from '../../components/hero/Hero'
 import homeImage from '../../assets/images/homeImage.svg'
+import landingPageHeroBg from '../../assets/images/landingPageHero.svg'
 
 
 const LandingPage = () => {
@@ -16,6 +17,7 @@ const LandingPage = () => {
         subtitle="Get a driver for your car whenever you need. No contracts, no commitments."
         buttonText="Get the app"
         image={homeImage}
+        backgroundImage={landingPageHeroBg}
         onButtonClick={() => {
           // Handle app download
           console.log("Get the app clicked");
