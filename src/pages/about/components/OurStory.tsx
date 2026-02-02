@@ -1,14 +1,13 @@
 import React from "react";
-import ourStoryImg from "../../../assets/images/ourStoryImg.svg";
 import visionIcon from "../../../assets/icons/visionIcon.svg";
 import missionIcon from "../../../assets/icons/missionIcon.svg";
 
 const OurStory: React.FC = () => {
   return (
-    <section className="bg-[#F1F9FB]">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#F1F9FB] py-10">
+      <div className="mx-auto ">
         {/* STORY */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center justify-center px-4 py-16">
+        <div className="flex flex-col lg:flex-row gap-16 items-center justify-center pt-10 px-5 lg:px-22 xl:px-36">
           {/* Left — Text */}
           <div>
             <div className="text-center lg:text-left mb-6">
@@ -46,12 +45,12 @@ const OurStory: React.FC = () => {
 
           {/* Right — Image grid */}
           <div>
-            <img src={ourStoryImg} alt="" className="w-full" />
+            <img src="/ourStoryImg.webp" alt="" className="w-full" />
           </div>
         </div>
 
         {/* MISSION & VISION */}
-        <div className="mt-24 bg-white px-4 py-16">
+        <div className="mt-24 bg-white py-16 px-5 lg:px-22 xl:px-36">
           <div className="text-center mb-12">
             <span className="inline-block mb-4 px-6 py-3 sm:px-18 rounded-full bg-[#2F414F] text-white text-xl font-medium">
               Our Mission & Vision

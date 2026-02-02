@@ -1,14 +1,11 @@
-import flexBookingImg from "../../../assets/images/flexibleBook.svg";
-import professionalDriversImg from "../../../assets/images/profDrive.svg";
-import realTimeTrackingImg from "../../../assets/images/realTime.svg";
-import transparentPricingImg from "../../../assets/images/priceBargain.svg";
+import {CheckCircle} from "lucide-react";
 
 const features = [
   {
     id: 1,
     title: "Flexible Booking",
     desc: "Book instantly or schedule ahead for any occasion. Whether you need a driver in 5 minutes or 5 days, Feur has you covered.",
-    image: flexBookingImg,
+    image: "/flexibleBook.webp",
     points: [
       "Instant booking in under 60 seconds",
       "Schedule rides up to 30 days in advance",
@@ -21,7 +18,7 @@ const features = [
     id: 2,
     title: "Professional Drivers",
     desc: "Every driver is thoroughly vetted, trained, and professional. Experience service that exceeds expectations every time.",
-    image: professionalDriversImg,
+    image: "/profDrive.svg",
     points: [
       "Comprehensive background checks",
       "Minimum 3 years professional experience",
@@ -33,7 +30,7 @@ const features = [
     id: 3,
     title: "Real-Time Tracking",
     desc: "Know exactly where your driver is with live GPS tracking. Share your trip with loved ones for added peace of mind.",
-    image: realTimeTrackingImg,
+    image: "/realTime.webp",
     points: [
       "Live GPS tracking during the entire trip",
       "Share trip details with trusted contacts",
@@ -45,7 +42,7 @@ const features = [
     id: 4,
     title: "Price Bargaining",
     desc: "Negotiable and fair pricing. See the exact cost upfront, negotiate and pay securely through the app.",
-    image: transparentPricingImg,
+    image: "/priceBargain.webp",
     points: [
       "Clear pricing before you book",
       "Bargain fare",
@@ -92,6 +89,7 @@ const KeyFeatures = () => {
 
               {/* Content */}
               <div>
+              <div className="mb-4 h-2 w-22 bg-[#3894A3] rounded-full" />
                 <h3 className="text-2xl font-semibold text-[#2F414F] mb-4">
                   {feature.title}
                 </h3>
@@ -105,7 +103,7 @@ const KeyFeatures = () => {
                       key={i}
                       className="flex items-start gap-3 text-[#2F414F]"
                     >
-                      <span className="mt-1 h-2 w-2 rounded-full bg-[#3894A3]" />
+                      <CheckCircle className="w-5 h-5 text-[#3894A3] mt-0.5 shrink-0" />
                       <span>{point}</span>
                     </li>
                   ))}

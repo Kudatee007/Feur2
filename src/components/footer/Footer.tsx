@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#2F414F] text-white px-4 pt-16 pb-8">
+    <footer className="bg-[#2F414F] text-white px-5 lg:px-22 xl:px-36 py-8 md:py-16">
       <div className="max-w-7xl mx-auto">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -37,11 +37,11 @@ const Footer: React.FC = () => {
               <img
                 src={feurLogo}
                 alt="Feur logo"
-                className="h-[48px] w-[36px] mb-4"
+                className="h-12 w-9 mb-4"
               />
             </Link>
 
-            <p className="text-sm text-white/80 leading-relaxed max-w-sm">
+            <p className="text-base text-white/80 leading-relaxed max-w-sm">
               Hire a driver, anytime, anywhere. Africa’s premier platform
               connecting car owners with professional, verified drivers on
               demand.
@@ -65,8 +65,8 @@ const Footer: React.FC = () => {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-3 text-sm text-white/80">
+            <h4 className="text-[18px] font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-3 text-base text-white/80">
               {footerNav.map((item) => (
                 <li key={item.id}>
                   <button
@@ -84,8 +84,8 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-4 text-sm text-white/80">
+            <h4 className="text-[18px] font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-4 text-base text-white/80">
               <li>
                 <a
                   href="mailto:support@feur.com"
@@ -116,9 +116,9 @@ const Footer: React.FC = () => {
 
         {/* Bottom row */}
         <div className="mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-          <p>© 2026 Feur. All rights reserved.</p>
+          <p className="text-base">© 2026 Feur. All rights reserved.</p>
 
-          <div className="flex gap-6">
+          <div className="flex gap-6 md:text-base">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
             <Link to="/driver-terms">Driver Terms</Link>

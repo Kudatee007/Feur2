@@ -1,16 +1,15 @@
 import React from "react";
 import HowItWorksCard from "./components/HowItWorksCard";
-import step1Img from "../../../../assets/images/step1.svg";
-import step2Img from "../../../../assets/images/step2.svg";
-import step3Img from "../../../../assets/images/step3.svg";
-import step4Img from "../../../../assets/images/step4.svg";
+import downloadIcon from "../../../../assets/icons/download-icon.svg";
+import requestIcon from "../../../../assets/icons/request-icon.svg";
+import meetIcon from "../../../../assets/icons/meet-icon.svg";
+import rateReviewIcon from "../../../../assets/icons/rate-review-icon.svg";
 import appStep1Img from "../../../../assets/images/appStep1.svg";
 import appStep2Img from "../../../../assets/images/appStep2.svg";
 import appStep3Img from "../../../../assets/images/appStep3.svg";
 import appStep4Img from "../../../../assets/images/appStep4.svg";
 import appStep5Img from "../../../../assets/images/appStep5.svg";
 import appStep6Img from "../../../../assets/images/appStep6.svg";
-import appMobile from "../../../../assets/images/appStepMobile.svg";
 
 type Step = {
   id: number;
@@ -81,9 +80,9 @@ const StepItem: React.FC<{ step: Step; isLast?: boolean }> = ({ step }) => {
 
 const HowItWorks = () => {
   return (
-    <div className="bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-10">
-      <div className="max-w-7xl mx-auto text-center">
-        <div className="">
+    <div className="bg-[#F1F9FB]">
+      <div className="mx-auto text-center">
+        <div className="px-5 lg:px-22 xl:px-36 py-10">
           <div className="text-center mb-12 sm:mb-16">
             <span className="mb-20 px-6 py-3 rounded-full bg-[#2F414F] text-white text-xl font-medium text-center">
               How It Works
@@ -92,33 +91,33 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <HowItWorksCard
-              src={step1Img}
+              src={downloadIcon}
               step="01"
               title="Download & Register"
               txt="Download the Feur app and create your account to get started"
             />
             <HowItWorksCard
-              src={step2Img}
+              src={requestIcon}
               step="02"
               title="Request a Driver"
               txt="Choose your pick-up location and request a verified driver"
             />
             <HowItWorksCard
-              src={step3Img}
+              src={meetIcon}
               step="03"
               title="Meet Your Driver"
               txt="Meet your professional driver and enjoy a safe journey to your destination"
             />
             <HowItWorksCard
-              src={step4Img}
+              src={rateReviewIcon}
               step="04"
-              title="Download & Register"
+              title="Rate & Review"
               txt="Share your experience and rate your driver after your ride"
             />
           </div>
         </div>
 
-        <div className="py-10 flex flex-col items-center gap-11">
+        <div className="flex flex-col items-center gap-11 sm:mt-12 bg-white lg:bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-10">
           <h3 className="bg-[#2F414F] px-6 py-3 rounded-full w-fit text-white text-xl font-semibold text-center">
             Steps To Using Feur
           </h3>
@@ -141,9 +140,9 @@ const HowItWorks = () => {
 
             <div>
               <img
-                src={appMobile}
+                src="/appStepMobile.webp"
                 alt="mobile.svg"
-                // className="w-[150px] h-[250px] sm:w-auto sm:h-auto"
+                className="w-[220px] h-[380px] sm:w-auto sm:h-auto"
               />
             </div>
           </div>

@@ -23,11 +23,11 @@ const ExperienceFeurCTA = () => {
         {/* Actions */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#1F6F7A] font-medium shadow hover:opacity-90 transition">
-            Download the App
+            Download Feur Now
           </button>
 
           <button className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/60 text-white hover:bg-white/10 transition">
-            Become a Driver
+            Learn More
           </button>
         </div>
       </div>

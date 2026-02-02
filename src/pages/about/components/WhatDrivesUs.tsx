@@ -1,10 +1,4 @@
 import React from "react";
-import flexImg from "../../../assets/images/flexibility.svg";
-import reliabImg from "../../../assets/images/reliability.svg";
-import innovImg from "../../../assets/images/innovation.svg";
-import customerImg from "../../../assets/images/customer-centric.svg";
-import sustainImg from "../../../assets/images/sustainability.svg";
-import safetyImg from "../../../assets/images/safety.svg";
 import flexIcon from "../../../assets/icons/flexIcon.svg";
 import reliaIcon from "../../../assets/icons/reliaIcon.svg";
 import innovIcon from "../../../assets/icons/innoIcon.svg";
@@ -24,49 +18,49 @@ const values: ValueItem[] = [
     title: "Flexibility",
     description:
       "Adapting to your schedule and needs, whenever and wherever you need a driver.",
-    image: flexImg,
+    image: "/flexibility.webp",
     icon: flexIcon,
   },
   {
     title: "Reliability",
     description:
       "Professional drivers you can count on for safe, timely service every time.",
-    image: reliabImg,
-    icon: reliaIcon,
+    image: "/reliability.webp",
+    icon: safetyIcon,
   },
   {
     title: "Innovation",
     description:
       "Leading Africa’s mobility revolution with cutting-edge technology.",
-    image: innovImg,
+    image: "/innovation.webp",
     icon: innovIcon,
   },
   {
     title: "Customer-Centric",
     description:
       "Your satisfaction drives everything we do, from features to support.",
-    image: customerImg,
+    image: "/customer-centric.webp",
     icon: customerIcon,
   },
   {
     title: "Sustainability",
     description:
       "Committed to reducing environmental impact through smart solutions.",
-    image: sustainImg,
+    image: "/sustainability.webp",
     icon: sustainIcon,
   },
   {
     title: "Safety",
     description:
       "Your security is our top priority with verified drivers and real-time tracking.",
-    image: safetyImg,
-    icon: safetyIcon,
+    image: "/safety.webp",
+    icon: reliaIcon,
   },
 ];
 
 const WhatDrivesUs: React.FC = () => {
   return (
-    <section className="bg-[#F1F9FB] py-20 px-4">
+    <section className="bg-[#F1F9FB] py-16 px-5 lg:px-22 xl:px-36">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -92,25 +86,25 @@ const WhatDrivesUs: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full min-h-[160px] object-cover"
+                  className="w-full h-full min-h-40 object-cover"
                 />
 
                 {/* Icon */}
-                <div className="absolute top-4 left-4 w-18 h-14 rounded-xl bg-[#2F8F9D] text-white flex items-center justify-center shadow-md">
+                <div className="absolute bottom-4 left-4 w-14 h-12 rounded-xl bg-[#2F8F9D] text-white flex items-center justify-center shadow-md">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className="w-6 h-6 object-cover"
+                    className="absolute top-3 w-8 h-8 object-cover"
                   />
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-sm font-semibold text-[#2F414F]">
+                <h3 className="text-lg font-semibold text-[#2F414F]">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-[#4A5565] leading-relaxed">
+                <p className="mt-2 text-base text-[#4A5565] leading-relaxed">
                   {item.description}
                 </p>
               </div>

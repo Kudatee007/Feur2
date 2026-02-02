@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({
       }}
     >
       <div className="space-y-6 flex flex-col items-center lg:items-start lg:max-w-4xl px-4">
-        <h1 className="text-4xl sm:text-5xl lg:text-[80px] text-white font-bold lg:text-start leading-10 sm:leading-[60px] lg:leading-[90px]">
+        <h1 className="text-4xl sm:text-5xl lg:text-[73px] text-white font-bold lg:text-start leading-10 sm:leading-[60px] lg:leading-[90px]">
           {title}
         </h1>
         <p className="text-white text-xl sm:text-2xl lg:text-4xl font-normal lg:text-start mb-4 leading-8 lg:leading-12">
@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({
       <img
         src={image}
         alt={imageAlt}
-        className="mt-4 w-full max-w-[340px] sm:w-full sm:min-w-[490px] sm:h-full rounded-xl"
+        className="mt-6 w-full max-w-60 sm:w-full sm:min-w-[490px] sm:h-full rounded-xl"
       />
     </section>
   );

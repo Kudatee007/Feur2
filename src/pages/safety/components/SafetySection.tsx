@@ -1,12 +1,5 @@
 import { CheckCircle } from "lucide-react";
 import React from "react";
-import driverScreen from "../../../assets/images/driverScreen.svg";
-import realTimeTracking from "../../../assets/images/realTime.svg";
-import identityVerification from "../../../assets/images/passDriver.svg";
-import emergencyAssistance from "../../../assets/images/emergencyAssit.svg";
-import contactlessPayment from "../../../assets/images/contact-less.svg";
-import ratingsSystem from "../../../assets/images/dri-ver.svg";
-import insuranceProtection from "../../../assets/images/insureProtection.svg";
 import safetyIcon1D from "../../../assets/icons/safetyIcon1D.svg"
 import safetyIcon2D from "../../../assets/icons/safetyIcon2D.svg"
 import safetyIcon3D from "../../../assets/icons/safetyIcon3D.svg"
@@ -32,7 +25,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "01",
     title: "Thorough Driver Screening",
-    image: driverScreen,
+    image: "/driverScreen.webp",
     points: [
       "Comprehensive background checks including criminal records",
       "Valid driver’s license and professional certification",
@@ -44,7 +37,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "02",
     title: "Real-Time Trip Monitoring",
-    image: realTimeTracking,
+    image: "/realTimeTrip.webp",
     points: [
       "GPS tracking for every trip with live location updates",
       "Route optimization to ensure the safest and most efficient path",
@@ -56,7 +49,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "03",
     title: "Passenger & Driver Identity Verification",
-    image: identityVerification,
+    image: "/passDriver.webp",
     points: [
       "Mandatory ID verification for all platform users",
       "Photo verification to match profiles with actual identity",
@@ -68,7 +61,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "04",
     title: "Emergency Assistance",
-    image: emergencyAssistance,
+    image: "/emergencyAssit.webp",
     points: [
       "In-app panic button with direct connection to emergency services",
       "24/7 customer support team trained in crisis management",
@@ -80,7 +73,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "05",
     title: "Contactless & Affordable Payments",
-    image: contactlessPayment,
+    image: "/contact-less.webp",
     points: [
       "End-to-end encrypted payment processing",
       "Multiple payment options including mobile money and cards",
@@ -92,7 +85,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "06",
     title: "Driver & Passenger Ratings System",
-    image: ratingsSystem,
+    image: "/dri-ver.webp",
     points: [
       "Mutual rating system to maintain accountability",
       "Detailed trip reviews help identify and address concerns",
@@ -104,7 +97,7 @@ const safetyItems: SafetyItem[] = [
   {
     id: "07",
     title: "Insurance Protection",
-    image: insuranceProtection,
+    image: "/insureProtection.webp",
     points: [
       "Comprehensive insurance coverage for all trips",
       "Comprehensive insurance coverage for all trips",

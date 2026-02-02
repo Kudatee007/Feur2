@@ -1,14 +1,15 @@
 import React from "react";
-import dailyCommuteImg from "../../../assets/images/perfect1.svg";
-import lateNightRidesImg from "../../../assets/images/perfect2.svg";
-import weekendGetawaysImg from "../../../assets/images/perfect3.svg";
-import specialEventsImg from "../../../assets/images/perfect4.svg";  
+import dailyCommuteIcon from "../../../assets/icons/daily-commute-icon.svg";
+import lateNightRidesIcon from "../../../assets/icons/late-night-icon.svg";
+import weekendGetawaysIcon from "../../../assets/icons/weeken-getaway-icon.svg";
+import specialEventsIcon from "../../../assets/icons/special-event-icon.svg";
 
 type Occasion = {
   id: number;
   title: string;
   description: string;
   image: string;
+  icon?: string;
 };
 
 const occasions: Occasion[] = [
@@ -17,35 +18,39 @@ const occasions: Occasion[] = [
     title: "Daily Commute",
     description:
       "Start your workday stress-free with a professional driver.",
-    image: dailyCommuteImg,
+    image: "/daily-commute.webp",
+    icon: dailyCommuteIcon,
   },
   {
     id: 2,
     title: "Late Night Rides",
     description:
       "Safe and secure transportation at any hour of the night.",
-    image: lateNightRidesImg,
+    image: "/late-night-rides.webp",
+    icon: lateNightRidesIcon,
   },
   {
     id: 3,
     title: "Weekend Getaways",
     description:
       "Enjoy family trips without the hassle of driving.",
-    image: weekendGetawaysImg,
+    image: "/weekends-getaway.webp",
+    icon: weekendGetawaysIcon,
   },
   {
     id: 4,
     title: "Special Events",
     description:
       "Weddings, parties, and celebrations made easy.",
-    image: specialEventsImg,
+    image: "/special-events.webp",
+    icon: specialEventsIcon,
   },
 ];
 
 const PerfectForEveryOccasion: React.FC = () => {
   return (
-    <section className="bg-[#FFFFFF] md:bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-10 pb-26">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="bg-[#FFFFFF] md:bg-[#F1F9FB] px-5 lg:px-22 xl:px-36 py-10 pb-18">
+      <div className="mx-auto text-center">
         {/* Section pill */}
         <span className="inline-block mb-6 px-6 ld:px-12 py-3 rounded-full bg-[#2F414F] text-white text-xl lg:text-2xl font-medium">
           Perfect For Every Occasion
@@ -65,13 +70,37 @@ const PerfectForEveryOccasion: React.FC = () => {
               className="bg-white rounded-2xl shadow-feur overflow-hidden text-left transition-transform duration-300 hover:-translate-y-1 shadow-md"
             >
               {/* Image */}
-              <div className="h-40 w-full overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <div className="relative h-48 w-full overflow-hidden rounded-t-xl">
+  {/* Image */}
+  <img
+    src={item.image}
+    alt={item.title}
+    className="
+      h-full w-full object-cover
+      scale-105
+      blur-[1px]
+      brightness-90
+      contrast-95
+    "
+  />
+
+  {/* Soft overlay (this is key) */}
+  <div className="absolute top-4 right-4 bg-white/90 rounded-full p-4 shadow-md">
+
+  {/* Floating icon */}
+  <div className="
+  relative
+    w-14 h-12
+    rounded-2xl
+    bg-[#3894A3]
+    shadow-lg
+    flex items-center justify-center
+  ">
+    <img src={item.icon} alt="" className="w-10 h-10 absolute top-2" />
+  </div>
+  </div>
+</div>
+
 
               {/* Content */}
               <div className="p-4 lg:pb-14">
@@ -86,16 +115,18 @@ const PerfectForEveryOccasion: React.FC = () => {
           ))}
         </div>
 
-        <p className="max-w-2xl mx-auto text-[#364153] text-base md:text-xl mt-4">
+     <div className="mt-16">
+     <p className="max-w-2xl mx-auto text-[#364153] text-xl mt-4">
         Ready to experience hassle-free transportation for any occasion?
         </p>
 
         {/* CTA */}
         <div className="mt-6">
-          <button className="px-8 py-3 rounded-full bg-[#3894A3] text-white text-sm font-medium shadow-md hover:opacity-90 transition">
+          <button className="px-8 py-4 w-full sm:w-fit rounded-full bg-[#3894A3] text-white text-base font-medium shadow-md hover:opacity-90 transition">
             Get Started Today
           </button>
         </div>
+     </div>
       </div>
     </section>
   );

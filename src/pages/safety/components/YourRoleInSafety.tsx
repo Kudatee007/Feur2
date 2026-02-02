@@ -1,4 +1,5 @@
 import React from "react";
+import yourRoleIcon from "../../../assets/icons/yourRoleIcon.svg";
 
 const safetyTips = [
   "Verify the driver’s identity by checking their photo, name, and vehicle details before entering the car.",
@@ -16,7 +17,7 @@ const YourRoleInSafety: React.FC = () => {
       <div className="mx-auto max-w-3xl text-center text-white">
         {/* Icon */}
         <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#2F414F] shadow-lg">
-          <span className="text-xl">👥</span>
+          <img src={yourRoleIcon} alt="icon" className="w-10 h-10"/>
         </div>
 
         {/* Title */}
@@ -36,7 +37,7 @@ const YourRoleInSafety: React.FC = () => {
             {safetyTips.map((tip, index) => (
               <li key={index} className="flex gap-4">
                 {/* Number */}
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/20 text-sm font-medium">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2F414F] text-sm font-medium">
                   {index + 1}
                 </span>
 

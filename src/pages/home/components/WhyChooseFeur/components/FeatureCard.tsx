@@ -25,6 +25,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   className = "",
   onClick,
 }) => {
+    // Normalize index (handles "01" or 1)
+    const numericIndex =
+    typeof index === "string" ? Number(index) : index;
+
   const containerClasses = [
     "flex",
     "flex-col",
@@ -67,25 +71,30 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         </div>
 
         {/* Index circle */}
-        {index !== undefined && (
-          <div className="absolute left-4 bottom-4">
-            <div
-              className="w-10 h-10 rounded-full flex items-center justify-center
-                         bg-teal-600 text-white text-sm font-semibold shadow-md"
-              aria-hidden
-            >
-              {index}
-            </div>
-          </div>
-        )}
+        <div className="absolute left-4 bottom-4">
+  <div
+    className={`w-16 h-16 rounded-full flex items-center justify-center
+      text-white text-2xl font-normal shadow-md
+      ${
+        numericIndex === 2 || numericIndex === 4
+          ? "bg-[#2F414F]"   // darker accent for 2 & 4
+          : "bg-[#3894A3]"   // default teal for others
+      }
+    `}
+    aria-hidden
+  >
+    {index}
+  </div>
+</div>
+
 
         {/* Image icon */}
           <div className="absolute right-4 top-4">
             <div
-              className="rounded-lg bg-white/90 flex items-center justify-center shadow p-1"
+              className="rounded-lg bg-white/90 flex items-center justify-center shadow p-2"
               aria-hidden
             >
-              <img src={imageIcon} alt="feature-icon" className="w-14 h-14"/>
+              <img src={imageIcon} alt="feature-icon" className="w-16 h-16"/>
             </div>
           </div>
       </div>
@@ -93,7 +102,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       {/* Text */}
       <div className="flex-1 min-w-0 text-start md:text-left">
         {pill && (
-          <span className="inline-block mb-3 px-3 py-1 text-xs font-medium rounded-full text-white bg-[#3894A3]">
+          <span className="inline-block mb-3 px-6 py-2 text-base font-normal rounded-full text-white bg-[#3894A3]">
             {pill}
           </span>
         )}
@@ -109,7 +118,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         )}
 
         {/* Decorative underline */}
-        <div className="mt-4 h-1 w-14 bg-slate-200 rounded-full" />
+        <div className="mt-4 h-2 w-22 bg-[#3894A3] rounded-full" />
       </div>
     </div>
   );
