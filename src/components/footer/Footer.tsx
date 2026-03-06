@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                   className="flex items-center gap-3 hover:text-white transition"
                 >
                   <Mail className="w-4 h-4 text-[#2F8F9D]" />
-                  support@feur.com
+                  support@usefeur.com
                 </a>
               </li>
 

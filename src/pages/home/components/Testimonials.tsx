@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     name: "Tunde Balogun",
-    location: "Accra, Ghana",
+    location: "Lagos, Nigeria",
     message:
       "The drivers are professional, punctual, and treat my car with respect. I use Feur every Friday after work and it's become an essential part of my routine.",
     rating: 5,
@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     name: "Zainab Bello",
-    location: "Nairobi, Kenya",
+    location: "Lagos, Nigeria",
     message:
       "As a business owner, I need reliable transportation for client meetings. Feur's verified drivers are always professional and make great impressions. Worth every penny!",
     rating: 4,

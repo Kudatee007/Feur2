@@ -3,6 +3,10 @@ import dailyCommuteIcon from "../../../assets/icons/daily-commute-icon.svg";
 import lateNightRidesIcon from "../../../assets/icons/late-night-icon.svg";
 import weekendGetawaysIcon from "../../../assets/icons/weeken-getaway-icon.svg";
 import specialEventsIcon from "../../../assets/icons/special-event-icon.svg";
+import dailyCommuteImage from "../../../assets/images/daily-commute.svg";
+import lateNightRidesImage from "../../../assets/images/late-night-rides.svg";
+import weekendGetawaysImage from "../../../assets/images/weekend-getaways.svg";
+import specialEventsImage from "../../../assets/images/special-events.svg";
 
 type Occasion = {
   id: number;
@@ -18,7 +22,7 @@ const occasions: Occasion[] = [
     title: "Daily Commute",
     description:
       "Start your workday stress-free with a professional driver.",
-    image: "/daily-commute.webp",
+    image: dailyCommuteImage,
     icon: dailyCommuteIcon,
   },
   {
@@ -26,7 +30,7 @@ const occasions: Occasion[] = [
     title: "Late Night Rides",
     description:
       "Safe and secure transportation at any hour of the night.",
-    image: "/late-night-rides.webp",
+    image: lateNightRidesImage,
     icon: lateNightRidesIcon,
   },
   {
@@ -34,7 +38,7 @@ const occasions: Occasion[] = [
     title: "Weekend Getaways",
     description:
       "Enjoy family trips without the hassle of driving.",
-    image: "/weekends-getaway.webp",
+    image: weekendGetawaysImage,
     icon: weekendGetawaysIcon,
   },
   {
@@ -42,7 +46,7 @@ const occasions: Occasion[] = [
     title: "Special Events",
     description:
       "Weddings, parties, and celebrations made easy.",
-    image: "/special-events.webp",
+    image: specialEventsImage,
     icon: specialEventsIcon,
   },
 ];
