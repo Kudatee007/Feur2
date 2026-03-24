@@ -1,8 +1,8 @@
 import FeatureCard from "./components/FeatureCard";
-import featureIcon1 from "../../../../assets/icons/featureIcon1.svg"
-import featureIcon2 from "../../../../assets/icons/featureIcon2.svg"
-import featureIcon3 from "../../../../assets/icons/featureIcon3.svg"
-import featureIcon4 from "../../../../assets/icons/featureIcon4.svg"
+import featureIcon1 from "../../../../assets/icons/featureIcon1.svg";
+import featureIcon2 from "../../../../assets/icons/featureIcon2.svg";
+import featureIcon3 from "../../../../assets/icons/featureIcon3.svg";
+import featureIcon4 from "../../../../assets/icons/featureIcon4.svg";
 
 const WhyChooseFeur = () => {
   return (
@@ -24,7 +24,7 @@ const WhyChooseFeur = () => {
           index="01"
           pill="Feature 1"
           title="Flexible Booking"
-          description="Book a driver whenever you need one—instantly or schedule ahead for any occasion."
+          description="Book a driver whenever you need one: instantly, in advance, or for half-day and full-day bookings for any occasion."
           imageIcon={featureIcon1}
         />
 
@@ -35,7 +35,7 @@ const WhyChooseFeur = () => {
           index="02"
           pill="Feature 2"
           title="Professional Drivers"
-          description="All drivers are verified, trained, and professional—giving you peace of mind."
+          description="All drivers are verified, trained, and professional, giving you peace of mind."
           imageIcon={featureIcon2}
           reverse
         />
@@ -73,7 +73,11 @@ const WhyChooseFeur = () => {
           driving needs.
         </span>
 
-        <button className="bg-[#3894A3] py-4 px-6 rounded-full text-[16px] text-white mt-5">
+        <button
+          className="mt-5 bg-[#3894A3] hover:bg-[#2F414F] active:scale-95
+            py-4 px-8 rounded-full text-base text-white font-medium
+            transition-all duration-300 shadow-md hover:shadow-lg"
+        >
           Download Feur Today
         </button>
       </div>

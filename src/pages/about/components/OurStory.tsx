@@ -5,18 +5,18 @@ import missionIcon from "../../../assets/icons/missionIcon.svg";
 const OurStory: React.FC = () => {
   return (
     <section className="bg-[#F1F9FB] py-10">
-      <div className="mx-auto ">
+      <div className="mx-auto">
         {/* STORY */}
         <div className="flex flex-col lg:flex-row gap-16 items-center justify-center pt-10 px-5 lg:px-22 xl:px-36">
           {/* Left — Text */}
-          <div>
+          <div className="flex-1">
             <div className="text-center lg:text-left mb-6">
-              <span className="mb-4 px-6 py-3 rounded-full bg-[#2F414F] text-white text-xl font-medium text-center w-[164px] sm:px-18">
+              <span className="px-6 py-3 rounded-full bg-[#2F414F] text-white text-xl font-medium">
                 Our Story
               </span>
             </div>
 
-            <h2 className="text-2xl md:text-4xl font-normal text-[#2F414F] text-center lg:text-start">
+            <h2 className="mt-6 text-2xl md:text-4xl font-semibold text-[#2F414F] text-center lg:text-start leading-tight">
               Born from a Simple Idea
             </h2>
 
@@ -27,25 +27,28 @@ const OurStory: React.FC = () => {
                 after. Professional drivers were available, but finding and
                 hiring them was complicated and unreliable.
               </p>
-
               <p>
                 We asked ourselves: what if hiring a professional driver could
                 be as easy as requesting a ride? What if car owners could
                 maintain their independence while ensuring their safety?
               </p>
-
               <p>
                 That question sparked a movement. Today, Feur is transforming
-                how people think about personal mobility across Africa —
-                creating opportunities for professional drivers while giving car
-                owners unprecedented freedom.
+                how people think about personal mobility across Africa creating
+                opportunities for professional drivers while giving car owners
+                unprecedented freedom.
               </p>
             </div>
           </div>
 
-          {/* Right — Image grid */}
-          <div>
-            <img src="/ourStoryImg.webp" alt="" className="w-full" />
+          {/* Right — Image */}
+          <div className="flex-1 w-full">
+            <img
+              src="/ourStoryImg.webp"
+              alt="Our story"
+              className="w-full
+                transition-transform duration-500 hover:scale-[1.02]"
+            />
           </div>
         </div>
 
@@ -59,16 +62,20 @@ const OurStory: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Mission */}
-            <div className="bg-[#2F414F] text-white rounded-2xl p-8 shadow-feur">
+            <div
+              className="group bg-[#2F414F] text-white rounded-2xl p-8 shadow-md
+              transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
               <div className="mb-8">
-                <span className="inline-flex items-center justify-center pt-2 px-3 rounded-xl bg-linear-to-b from-[#3894A3] to-[#056170] shadow-feur">
+                <span
+                  className="inline-flex items-center justify-center pt-2 px-3 rounded-xl
+                  bg-linear-to-b from-[#3894A3] to-[#056170] shadow-md"
+                >
                   <img src={missionIcon} alt="" className="w-12 h-12" />
                 </span>
               </div>
-
               <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-
-              <p className="text-white text-sm md:text-base leading-relaxed">
+              <p className="text-white/90 text-sm md:text-base leading-relaxed">
                 To revolutionize personal mobility across Africa by providing
                 instant access to professional, verified drivers — empowering
                 car owners with freedom, safety, and convenience while creating
@@ -77,17 +84,21 @@ const OurStory: React.FC = () => {
             </div>
 
             {/* Vision */}
-            <div className="bg-[#2F8F9D] text-white rounded-2xl p-8 shadow-feur">
+            <div
+              className="group bg-[#2F8F9D] text-white rounded-2xl p-8 shadow-md
+              transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
               <div className="mb-8">
-                <span className="inline-flex items-center justify-center pt-2 px-3 rounded-xl bg-linear-to-b from-[#2F414F] to-[#000E1C] shadow-feur">
+                <span
+                  className="inline-flex items-center justify-center pt-2 px-3 rounded-xl
+                  bg-linear-to-b from-[#2F414F] to-[#000E1C] shadow-md"
+                >
                   <img src={visionIcon} alt="" className="w-12 h-12" />
                 </span>
               </div>
-
               <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
-
-              <p className="text-white text-sm md:text-base leading-relaxed">
-                To become Africa’s most trusted mobility platform — where every
+              <p className="text-white/90 text-sm md:text-base leading-relaxed">
+                To become Africa's most trusted mobility platform — where every
                 car owner has seamless access to professional drivers, and every
                 driver has the opportunity to build a thriving career in a safe,
                 supportive ecosystem.

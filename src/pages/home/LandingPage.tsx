@@ -14,7 +14,7 @@ const LandingPage = () => {
         title="Hire a Driver anytime, anywhere!"
         subtitle="Get a driver for your car whenever you need. No contracts, no commitments."
         buttonText="Get the app"
-        image="/homeImage.webp"
+        image="/homeImage.svg"
         backgroundImage="/landingPageHero.webp"
         onButtonClick={() => {
           // Handle app download

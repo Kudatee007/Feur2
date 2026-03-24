@@ -1,15 +1,6 @@
 import React from "react";
 import HowItWorksCard from "./components/HowItWorksCard";
-import downloadIcon from "../../../../assets/icons/download-icon.svg";
-import requestIcon from "../../../../assets/icons/request-icon.svg";
-import meetIcon from "../../../../assets/icons/meet-icon.svg";
-import rateReviewIcon from "../../../../assets/icons/rate-review-icon.svg";
-import appStep1Img from "../../../../assets/images/appStep1.svg";
-import appStep2Img from "../../../../assets/images/appStep2.svg";
-import appStep3Img from "../../../../assets/images/appStep3.svg";
-import appStep4Img from "../../../../assets/images/appStep4.svg";
-import appStep5Img from "../../../../assets/images/appStep5.svg";
-import appStep6Img from "../../../../assets/images/appStep6.svg";
+import { Download, MapPin, User, Star } from "lucide-react";
 
 type Step = {
   id: number;
@@ -21,56 +12,81 @@ type Step = {
 const steps: Step[] = [
   {
     id: 1,
-    icon: appStep1Img,
+    icon: "/stepIcon1.svg",
     title: "Download & Sign In",
     subtitle: "Open the FEUR app and sign in to get started",
   },
   {
     id: 2,
-    icon: appStep2Img,
+    icon: "/stepIcon2.svg",
     title: "Set Pick-Up & Drop-off Location",
     subtitle: "Choose and confirm your pick-up location",
   },
   {
     id: 3,
-    icon: appStep3Img,
+    icon: "/stepIcon3.svg",
     title: "Hire Your Driver",
     subtitle: "Select a verified driver and hop in your car",
   },
   {
     id: 4,
-    icon: appStep4Img,
+    icon: "/stepIcon4.svg",
     title: "Choose and Verify Driver",
     subtitle: "Choose and confirm the driver’s details on arrival.",
   },
   {
     id: 5,
-    icon: appStep5Img,
+    icon: "/stepIcon5.svg",
     title: "Arrive Safely",
     subtitle: "Celebrate your safe arrival at your destination",
   },
   {
     id: 6,
-    icon: appStep6Img,
+    icon: "/stepIcon6.svg",
     title: "Rate & Review",
     subtitle: "Share your experience and rate your driver",
   },
 ];
 
+
 const StepItem: React.FC<{ step: Step; isLast?: boolean }> = ({ step }) => {
   return (
-    <div className="relative flex items-center gap-2 sm:w-auto">
+    <div
+      className="group relative flex items-center gap-6 cursor-default
+      transition-transform duration-300 hover:-translate-y-0.5"
+    >
       {/* icon bubble */}
-      <div className="relative z-10">
-        <img src={step.icon} alt={`${step.id}`} className="" />
+      <div className="relative z-10 shrink-0">
+        <div
+          className="w-[60px] h-[60px] bg-[#3894A3] rounded-full
+          flex items-center justify-center shadow-md
+          transition-all duration-300
+          group-hover:bg-[#2F414F] group-hover:scale-105"
+        >
+          <img src={step.icon} alt={`step ${step.id}`} className="w-8 h-8" />
+        </div>
+
+        {/* step number badge */}
+        <span
+          className="absolute -right-1.5 -bottom-1.5
+          text-[10px] font-bold text-white bg-[#2F414F]
+          w-5 h-5 rounded-full flex items-center justify-center
+          ring-2 ring-white
+          transition-colors duration-300 group-hover:bg-[#3894A3]"
+        >
+          {step.id}
+        </span>
       </div>
 
       {/* texts */}
       <div className="flex-1">
-        <p className="text-[#2F414F] font-semibold text-[clamp(0.88rem,1vw,2rem)] leading-tight">
+        <p
+          className="text-[#2F414F] font-semibold text-[clamp(0.88rem,1.4vw,1.1rem)] leading-tight
+          transition-colors duration-300 group-hover:text-[#3894A3]"
+        >
           {step.title}
         </p>
-        <p className="text-[#4A5565] text-[clamp(0.80rem,1vw,1.75rem)] mt-2">
+        <p className="text-[#4A5565] text-[clamp(0.78rem,1.1vw,0.9rem)] mt-1">
           {step.subtitle}
         </p>
       </div>
@@ -91,25 +107,25 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <HowItWorksCard
-              src={downloadIcon}
+              icon={Download}
               step="01"
               title="Download & Register"
               txt="Download the Feur app and create your account to get started"
             />
             <HowItWorksCard
-              src={requestIcon}
+              icon={User}
               step="02"
               title="Request a Driver"
               txt="Choose your pick-up location and request a verified driver"
             />
             <HowItWorksCard
-              src={meetIcon}
+              icon={MapPin}
               step="03"
               title="Meet Your Driver"
               txt="Meet your professional driver and enjoy a safe journey to your destination"
             />
             <HowItWorksCard
-              src={rateReviewIcon}
+              icon={Star}
               step="04"
               title="Rate & Review"
               txt="Share your experience and rate your driver after your ride"
@@ -125,11 +141,11 @@ const HowItWorks = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-16 lg:gap-20 w-full">
             <div className="relative">
               {/* vertical guide line behind badges */}
-              <div className="absolute left-10 top-14 bottom-6 w-0.5">
-                <div className="h-full w-px bg-[#3894A3]" />
+              <div className="absolute left-8 top-14 bottom-6 w-0.5">
+                <div className="h-full w-2px bg-[#3894A3]/50" />
               </div>
 
-              <div className="space-y-8 text-start">
+              <div className="space-y-10 text-start">
                 {steps.map((s, idx) => (
                   <div key={s.id} className="relative">
                     <StepItem step={s} isLast={idx === steps.length - 1} />

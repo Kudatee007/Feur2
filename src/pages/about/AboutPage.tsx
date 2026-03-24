@@ -10,7 +10,7 @@ const AboutPage = () => {
       <Hero
         title="Redefining Mobility"
         subtitle="We're not just connecting car owners with drivers, we're building the future of safe, flexible, and reliable transportation across the continent."
-        image="/aboutImage.webp"
+        image="/aboutImage.svg"
         backgroundImage="/aboutUsHeroBg.webp"
       />
       <OurStory />

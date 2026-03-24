@@ -3,48 +3,53 @@ import trackingIcon from "../../../assets/icons/locationIcon.svg";
 import emergencyIcon from "../../../assets/icons/emergencyIcon.svg";
 
 type SafetyItem = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-};
-
-type Props = {
-  icon: React.ReactNode;
+  icon: string;
+  iconAlt: string;
   title: string;
   description: string;
 };
 
 const safetyItems: SafetyItem[] = [
   {
-    icon: <img src={verifiedIcon} alt="verified-icons" className="w-8 h-8 text-white" />,
+    icon: verifiedIcon,
+    iconAlt: "Verified driver icon",
     title: "Verified Drivers",
     description:
       "All drivers undergo comprehensive background checks, including criminal records, driving history, and professional references.",
   },
   {
-    icon: <img src={trackingIcon} alt="tracking-icon" className="w-8 h-8 text-white" />,
+    icon: trackingIcon,
+    iconAlt: "Real-time tracking icon",
     title: "Real-Time Tracking",
     description:
       "Track your trip live and share your location with trusted contacts. Our GPS tracking ensures you're always connected.",
   },
   {
-    icon: <img src={emergencyIcon} alt="emergency-icon" className="w-8 h-8 text-white"/>,
+    icon: emergencyIcon,
+    iconAlt: "Emergency support icon",
     title: "Emergency Support",
     description:
       "24/7 emergency assistance with one-tap access. Our support team is always ready to respond to safety concerns.",
   },
 ];
 
-function SafetyCard({ icon, title, description }: Props) {
+function SafetyCard({ icon, iconAlt, title, description }: SafetyItem) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-      <div className="w-14 h-10 rounded-lg bg-[#3894A3] flex items-center justify-center mb-4">
-        {icon}
+    <div className="group bg-white rounded-2xl p-6 shadow-sm
+      transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+      {/* Icon */}
+      <div className="w-12 h-12 rounded-xl bg-[#3894A3] flex items-center justify-center mb-5
+        shadow-md transition-all duration-300 group-hover:bg-[#2F414F] group-hover:scale-110">
+        <img src={icon} alt={iconAlt} className="w-6 h-6" />
       </div>
 
-      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+      <h3 className="text-lg font-semibold text-[#2F414F]
+        transition-colors duration-300 group-hover:text-[#3894A3]">
+        {title}
+      </h3>
 
-      <p className="mt-2 text-slate-600 text-sm leading-relaxed">
+      <p className="mt-2 text-[#4A5565] text-sm leading-relaxed">
         {description}
       </p>
     </div>
@@ -54,25 +59,26 @@ function SafetyCard({ icon, title, description }: Props) {
 export default function SafetyFeatures() {
   return (
     <section className="bg-[#F1F9FB] py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-5">
+
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="inline-block bg-[#2F414F] text-white text-xl px-4 py-3 sm:px-18 rounded-full">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="inline-block bg-[#2F414F] text-white text-xl px-6 py-3 sm:px-18 rounded-full mb-4">
             Safety Features
           </span>
-
-          <p className="mt-4 text-slate-600 text-xl">
+          <p className="text-[#364153] text-base md:text-xl">
             Multiple layers of protection designed to keep you safe at every
             stage of your journey.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {safetyItems.map((item, index) => (
             <SafetyCard key={index} {...item} />
           ))}
         </div>
+
       </div>
     </section>
   );
