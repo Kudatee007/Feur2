@@ -18,7 +18,7 @@ const features = [
     id: 2,
     title: "Professional Drivers",
     desc: "Every driver is thoroughly vetted, trained, and professional. Experience service that exceeds expectations every time.",
-    image: "/features-professional-0driver.svg",
+    image: "/features-professional-driver.svg",
     points: [
       "Comprehensive background checks",
       "Minimum 3 years professional experience",

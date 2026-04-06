@@ -44,7 +44,7 @@ const MeetTheTeam: React.FC = () => {
               bg-gradient-to-t from-black/60 to-transparent
               px-6 py-6 md:py-8">
               <p className="text-white text-sm md:text-base italic leading-relaxed max-w-2xl mx-auto">
-                &ldquo;We&apos;re not just building an app — we&apos;re building a
+                &ldquo;We&apos;re not just building an app we&apos;re building a
                 movement that&apos;s changing how Africa moves.&rdquo;
               </p>
             </div>

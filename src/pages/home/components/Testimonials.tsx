@@ -2,7 +2,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-
 type Testimonial = {
   id: number;
   name: string;
@@ -39,30 +38,31 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialCard = ({ item }: { item: Testimonial }) => (
-<div className="bg-linear-to-br from-[#3894A3] to-[#C7DAD4] rounded-2xl pt-2.5">
-<div className="relative bg-[#F9FCFD] p-6 flex flex-col shadow-md min-h-[360px]">
-    {/* Author */}
-    <div className="my-4">
-      <p className="font-medium text-slate-900 text-xl">{item.name}</p>
-      {item.location && <p className="text-base text-slate-500">{item.location}</p>}
+  <div className="bg-linear-to-br from-[#3894A3] to-[#C7DAD4] rounded-2xl pt-2.5">
+    <div className="relative bg-[#F9FCFD] p-6 flex flex-col shadow-md min-h-[380px] md:min-h-80 h-full">
+      {/* Author */}
+      <div className="my-4">
+        <p className="font-medium text-slate-900 text-xl">{item.name}</p>
+        {item.location && (
+          <p className="text-base text-slate-500">{item.location}</p>
+        )}
+      </div>
+
+      {/* Stars */}
+      <div className="flex gap-1 mb-2">
+        {Array.from({ length: item.rating }).map((_, i) => (
+          <span key={i} className="text-[#3894A3] text-xl">
+            ★
+          </span>
+        ))}
+      </div>
+
+      {/* Message */}
+      <p className="text-slate-700 text-[18px] md:text-base leading-relaxed flex-1">
+        “{item.message}”
+      </p>
     </div>
-
-       {/* Stars */}
-       <div className="flex gap-1 mb-2">
-      {Array.from({ length: item.rating }).map((_, i) => (
-        <span key={i} className="text-[#3894A3] text-xl">
-          ★
-        </span>
-      ))}
-    </div>
-
-
-    {/* Message */}
-    <p className="text-slate-700 text-[18px] md:text-base leading-relaxed flex-1">
-      “{item.message}”
-    </p>
   </div>
-</div>
 );
 
 const Testimonials: React.FC = () => {

@@ -77,7 +77,7 @@ const OurStory: React.FC = () => {
               <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed">
                 To revolutionize personal mobility across Africa by providing
-                instant access to professional, verified drivers — empowering
+                instant access to professional, verified drivers empowering
                 car owners with freedom, safety, and convenience while creating
                 sustainable employment opportunities for skilled drivers.
               </p>
@@ -98,7 +98,7 @@ const OurStory: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
               <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                To become Africa's most trusted mobility platform — where every
+                To become Africa's most trusted mobility platform where every
                 car owner has seamless access to professional drivers, and every
                 driver has the opportunity to build a thriving career in a safe,
                 supportive ecosystem.
