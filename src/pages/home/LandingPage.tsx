@@ -18,7 +18,6 @@ const LandingPage = () => {
         backgroundImage="/landingPageHero.webp"
         onButtonClick={() => {
           // Handle app download
-          console.log("Get the app clicked");
         }}
       />
       <HowItWorks />

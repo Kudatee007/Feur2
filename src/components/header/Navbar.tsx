@@ -49,9 +49,9 @@ const Navbar = () => {
         </NavLink>
 
         {/* Desktop nav */}
-        <ul className="hidden lg:flex gap-12 text-[#2F414F]">
+        <ul className="hidden lg:flex gap-8 text-[#2F414F]">
           {mainNav.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} className="text-base font-normal">
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>

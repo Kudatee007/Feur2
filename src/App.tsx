@@ -7,6 +7,7 @@ import AboutPage from "./pages/about/AboutPage";
 import FeaturesPage from "./pages/features/FeaturesPage";
 import SafetyPage from "./pages/safety/SafetyPage";
 import ContactPage from "./pages/contact/ContactPage";
+import DriversPage from "./pages/drivers/ForDrivers";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/safety" element={<SafetyPage />} />
+          <Route path="/drivers" element={<DriversPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>
