@@ -7,7 +7,7 @@ import feurLogo from "../../assets/images/feurLogo.svg";
 import { mainNav, mobileNav } from "../../config/navigation";
 import { scrollToSection } from "../../utils/scrollToSection";
 
-const Navbar = () => {
+const Header = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-50">
+    <nav className="sticky top-0 z-40 bg-white sm:relative">
       {/* Top bar */}
       <div className="flex justify-between lg:justify-around items-center px-5 py-3 bg-white shadow-sm">
         {/* Logo */}
@@ -158,4 +158,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

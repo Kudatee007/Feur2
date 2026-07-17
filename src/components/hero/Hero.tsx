@@ -1,6 +1,5 @@
 // components/hero/Hero.tsx
 import React from "react";
-import bgImg from "../../assets/images/ImageWithFallback.svg";
 import { CiMobile2 } from "react-icons/ci";
 
 interface HeroProps {
@@ -23,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({
   image,
   imageAlt = "Hero image",
   backgroundColor = "#2F414F",
-  backgroundImage = bgImg,
+  backgroundImage,
   onButtonClick,
 }) => {
   return (

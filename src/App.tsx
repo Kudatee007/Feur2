@@ -1,8 +1,9 @@
+import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import Layout from "./layout/Layout";
+import Layout from "./components/layout/Layout";
 
-import LandingPage from "./pages/home/LandingPage";
+import Home from "./pages/home/Home";
 import AboutPage from "./pages/about/AboutPage";
 import FeaturesPage from "./pages/features/FeaturesPage";
 import SafetyPage from "./pages/safety/SafetyPage";
@@ -11,19 +12,21 @@ import DriversPage from "./pages/drivers/ForDrivers";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/safety" element={<SafetyPage />} />
-          <Route path="/drivers" element={<DriversPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Route>
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/safety" element={<SafetyPage />} />
+            <Route path="/drivers" element={<DriversPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 

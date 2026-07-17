@@ -5,10 +5,12 @@ import ContactInfo from "./components/ContactInfo";
 import OtherWaysToReachUs from "./components/OtherWaysToReachUs";
 import ReadyToGetStarted from "./components/ReadyToGetStarted";
 import Hero from "../../components/hero/Hero";
+import FaqAccordion from "../../components/ui/FaqAccordion";
+import { Helmet } from "react-helmet-async";
 
-const EMAILJS_SERVICE_ID  = "service_fd0y0mf";
+const EMAILJS_SERVICE_ID = "service_fd0y0mf";
 const EMAILJS_TEMPLATE_ID = "template_07vof2r";
-const EMAILJS_PUBLIC_KEY  = "jvXsIj53efzQNRAJo";
+const EMAILJS_PUBLIC_KEY = "jvXsIj53efzQNRAJo";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -21,6 +23,53 @@ type FieldProps = {
   name: string;
   required?: boolean;
 };
+
+const passengerFaqs = [
+  {
+    q: "How does Feur work?",
+    a: "Feur connects car owners with vetted professional drivers on demand. Request a driver through the app, confirm your booking, and a qualified driver arrives to drive you in your own vehicle.",
+  },
+  {
+    q: "Are Feur drivers vetted?",
+    a: "Yes. Every driver undergoes thorough screening and verification — including identity verification, driver's licence verification, and document checks — to help ensure safety and professionalism.",
+  },
+  {
+    q: "Can I choose a specific driver?",
+    a: "Yes. If your preferred driver is available, you can select them when making a booking or schedule them for future trips.",
+  },
+  {
+    q: "Can I book a driver in advance?",
+    a: "Absolutely. You can schedule a driver ahead of time for business meetings, airport transfers, school runs, events, appointments, and other planned trips.",
+  },
+  {
+    q: "Can I hire a driver for the whole day?",
+    a: "Yes. Feur offers daily hire options for customers who need a dedicated driver for multiple trips, errands, meetings, or events throughout the day.",
+  },
+  {
+    q: "Do I need to provide a vehicle?",
+    a: "Yes. Feur is a Driver-as-a-Service platform — our drivers operate your vehicle. Feur does not provide vehicles.",
+  },
+  {
+    q: "How do payments work?",
+    a: "Payments are made securely through the Feur app using Paystack. Once your trip is completed, the final fare is charged and you receive a payment confirmation in the app.",
+  },
+  {
+    q: "What if I need to cancel a booking?",
+    a: "Bookings can be cancelled through the app before the trip begins. Once a trip has started, cancellations aren't permitted. Any applicable cancellation policy or fees are shown before you confirm.",
+  },
+  {
+    q: "What happens if there's an emergency during a trip?",
+    a: "Feur provides safety features, including trip tracking and emergency support, to help enhance the safety of both customers and drivers.",
+  },
+  {
+    q: "Can someone else book a driver on my behalf?",
+    a: "Yes. You can book a driver for a family member, friend, colleague, or loved one by providing the necessary trip details.",
+  },
+  {
+    q: "What areas does Feur operate in?",
+    a: "Feur is launching in Lagos and plans to expand to other cities as we grow.",
+  },
+];
 
 function FormField({
   label,
@@ -69,7 +118,7 @@ export default function ContactSection() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
       setStatus("success");
       formRef.current.reset();
@@ -82,6 +131,12 @@ export default function ContactSection() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact — Feur</title>
+        <meta name="description" content="Get in touch with the Feur team." />
+        <link rel="canonical" href="https://usefeur.com/contact" />
+      </Helmet>
+
       <Hero
         title="Contact Us"
         subtitle="Speak to a member of our team. We're here to help answer any questions you may have about Feur."
@@ -93,12 +148,13 @@ export default function ContactSection() {
 
       <section className="bg-[#F3FBFD] py-20 px-5">
         <div className="max-w-2xl mx-auto">
-
           {/* Header */}
           <div className="text-center mb-10">
-            <div className="mx-auto mb-4 w-12 h-12 rounded-xl
+            <div
+              className="mx-auto mb-4 w-12 h-12 rounded-xl
               bg-linear-to-br from-[#3894A3] to-[#056170]
-              flex items-center justify-center shadow-md">
+              flex items-center justify-center shadow-md"
+            >
               <Send className="text-white" size={18} />
             </div>
 
@@ -107,13 +163,13 @@ export default function ContactSection() {
             </span>
 
             <p className="text-slate-500 text-sm">
-              Fill out the form below and we'll get back to you as soon as possible.
+              Fill out the form below and we'll get back to you as soon as
+              possible.
             </p>
           </div>
 
           {/* Form Card */}
           <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8">
-
             {/* Success banner */}
             {status === "success" && (
               <div className="flex items-start gap-3 mb-6 p-4 rounded-xl bg-teal-50 border border-teal-200 text-teal-700">
@@ -141,7 +197,6 @@ export default function ContactSection() {
             )}
 
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
-
               {/* Full Name */}
               <FormField
                 label="Full Name*"
@@ -241,9 +296,10 @@ export default function ContactSection() {
               <div
                 className={`flex gap-3 items-start rounded-xl p-4 text-xs
                   transition-colors duration-200 cursor-pointer
-                  ${consent
-                    ? "bg-teal-50 border border-teal-200 text-teal-700"
-                    : "bg-slate-50 border border-slate-200 text-slate-500"
+                  ${
+                    consent
+                      ? "bg-teal-50 border border-teal-200 text-teal-700"
+                      : "bg-slate-50 border border-slate-200 text-slate-500"
                   }`}
                 onClick={() => setConsent((prev) => !prev)}
               >
@@ -288,7 +344,6 @@ export default function ContactSection() {
                   </>
                 )}
               </button>
-
             </form>
           </div>
         </div>
@@ -296,6 +351,22 @@ export default function ContactSection() {
 
       <OtherWaysToReachUs />
       <ReadyToGetStarted />
+
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-2xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center bg-[#2F414F] text-white text-base sm:text-xl lg:text-[26px] font-semibold px-6 py-3 lg:px-8 lg:py-3.5 rounded-full mb-4">
+              Frequently Asked Questions
+            </div>
+            <p className="text-[15px] sm:text-lg lg:text-xl text-[#364153]">
+              Everything you need to know about riding with Feur.
+            </p>
+          </div>
+
+          <FaqAccordion items={passengerFaqs} />
+        </div>
+      </section>
     </>
   );
 }

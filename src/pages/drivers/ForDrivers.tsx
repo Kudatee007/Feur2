@@ -1,4 +1,6 @@
 import { AiFillCheckCircle } from "react-icons/ai";
+import FaqAccordion from "../../components/ui/FaqAccordion";
+import { Helmet } from "react-helmet-async";
 
 const features = [
   {
@@ -7,7 +9,7 @@ const features = [
     tag: "EARN MORE",
     title: "Keep 65% of Every Trip",
     desc: "Earn more from every completed booking while Feur handles customer acquisition, bookings, and platform support. You focus on driving.",
-    image: "/features-earn-more.png",
+    image: "/features-earn-more.jpg",
     points: ["65% of every fare is yours", "No customer-hunting or marketing"],
   },
   {
@@ -180,19 +182,19 @@ const ownershipCosts = [
 const earnWays = [
   {
     id: 1,
-    image: "/earn-daily-transport.jpg",
+    image: "/earn-daily-transport.webp",
     title: "Daily transportation",
     desc: "Everyday commutes, errands and city runs.",
   },
   {
     id: 2,
-    image: "/earn-driver-hire.jpg",
+    image: "/earn-driver-hire.webp",
     title: "Daily driver hire packages",
     desc: "Half-day and full-day hire bookings.",
   },
   {
     id: 3,
-    image: "/earn-scheduled.jpg",
+    image: "/earn-scheduled.webp",
     title: "Scheduled bookings",
     desc: "Pre-planned trips, booked in advance.",
   },
@@ -206,14 +208,72 @@ const qualifications = [
   "Are willing to complete Feur's verification process",
 ];
 
+const driverFaqs = [
+  {
+    q: "What are the requirements to become a Feur driver?",
+    a: "Drivers must possess a valid driver's licence, relevant identification documents, and successfully complete Feur's verification and screening process.",
+  },
+  {
+    q: "How much does it cost to join Feur as a driver?",
+    a: "There is no joining fee for qualified drivers who successfully complete the onboarding process.",
+  },
+  {
+    q: "How much do drivers earn on Feur?",
+    a: "Drivers earn 65% of every completed trip, while Feur retains 35% as the platform commission.",
+  },
+  {
+    q: "How do drivers get paid, and when do they receive earnings?",
+    a: "Passengers pay securely through the Feur app using Paystack. Once a passenger completes payment for a trip, drivers will receive a notification in the app. Earnings from completed and paid trips are accumulated and transferred to the driver's registered bank account on a weekly basis.",
+  },
+  {
+    q: "What happens if a passenger doesn't pay?",
+    a: "You never collect cash. All payments run through the Feur app, once a passenger pays, you're notified and the earnings join your next weekly payout.",
+  },
+  {
+    q: "Can I choose when I work?",
+    a: "Yes. You're free to decide when to go online and accept bookings, giving you flexibility based on your own availability and personal schedule.",
+  },
+  {
+    q: "Is there a minimum number of trips I must complete?",
+    a: "No. You decide when and how often you want to work.",
+  },
+  {
+    q: "Will Feur provide me with a car?",
+    a: "No. Feur connects you with customers who already own vehicles and need professional driving services.",
+  },
+  {
+    q: "How will I know about new bookings?",
+    a: "You'll receive booking notifications in the Feur app and can accept or decline requests based on your availability.",
+  },
+  {
+    q: "What support does Feur provide drivers?",
+    a: "Feur provides onboarding, customer support, and access to earning opportunities through the platform.",
+  },
+  {
+    q: "What if a customer behaves inappropriately?",
+    a: "You can report incidents through the app, and Feur will investigate and take appropriate action in line with our platform policies.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Complete driver registration, submit the required documents, pass the verification checks, and once approved you can start accepting bookings in the app.",
+  },
+];
+
 const ForDrivers = () => {
   return (
-    <div>
+    <div className="">
+      <Helmet>
+        <title>Drivers — Feur</title>
+        <meta
+          name="description"
+          content="Explore driver features and opportunities with Feur."
+        />
+        <link rel="canonical" href="https://usefeur.com/drivers" />
+      </Helmet>
       {/* hero section */}
       <section
         className="text-center flex flex-col lg:flex-row items-center lg:justify-between py-10 px-4 sm:px-8 lg:px-22 gap-8
-           bg-cover bg-center bg-no-repeat min-h-[92vh]
-           bg-[linear-gradient(rgba(27,35,49,0.45),rgba(27,45,49,0.45)),url('/forDrivers.webp')]"
+           bg-cover bg-center bg-no-repeat min-h-[92vh] bg-[url('/for-drivers.webp')]"
       >
         <div className="space-y-6 flex flex-col items-center lg:items-start lg:max-w-4xl px-4">
           <span className="text-[12px] font-bold text-[#5EA9B5]">
@@ -237,7 +297,7 @@ const ForDrivers = () => {
         </div>
 
         <img
-          src="/for-drivers.jpg"
+          src="/for-drivers(2).webp"
           alt="Driver holding steering wheel and smiling"
           className="w-full max-w-60 sm:w-full sm:min-w-[490px] sm:h-full rounded-xl self-center"
         />
@@ -523,6 +583,22 @@ const ForDrivers = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-2xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center bg-[#2F414F] text-white text-base sm:text-xl lg:text-[26px] font-semibold px-6 py-3 lg:px-8 lg:py-3.5 rounded-full mb-4">
+              Driver FAQs
+            </div>
+            <p className="text-[15px] sm:text-lg lg:text-xl text-[#364153]">
+              Everything you need to know about driving and earning with Feur.
+            </p>
+          </div>
+
+          <FaqAccordion items={driverFaqs} />
         </div>
       </section>
     </div>

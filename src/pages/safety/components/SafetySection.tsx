@@ -6,7 +6,7 @@ import safetyIcon3D from "../../../assets/icons/safetyIcon3D.svg"
 import safetyIcon4D from "../../../assets/icons/safetyIcon4D.svg"
 import safetyIcon5D from "../../../assets/icons/safetyIcon5D.svg"
 import safetyIcon6D from "../../../assets/icons/safetyIcon6D.svg"
-import safetyIcon7D from "../../../assets/icons/safetyIcon7D.svg"
+import safetyIcon7D from "../../../assets/icons/recording.svg"
 
 type SafetyItem = {
   id: string;
@@ -96,13 +96,13 @@ const safetyItems: SafetyItem[] = [
   },
   {
     id: "07",
-    title: "Insurance Protection",
-    image: "/insureProtection.webp",
+    title: "In-Trip Audio Recording",
+    image: "/recording.webp",
     points: [
-      "Comprehensive insurance coverage for all trips",
-      "Comprehensive insurance coverage for all trips",
-      "Medical coverage in case of accidents during trips",
-      "Quick claims processing for peace of mind",
+      "Record audio during any trip, right from the app, for added peace of mind",
+      "Recordings are stored securely, private by default",
+      "Share a recording with Feur’s safety team if you ever report an incident",
+      "You stay in control: start and stop recording whenever you choose",
     ],
     icon: safetyIcon7D,
   },

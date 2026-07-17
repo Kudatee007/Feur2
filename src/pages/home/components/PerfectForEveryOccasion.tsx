@@ -72,7 +72,7 @@ const PerfectForEveryOccasion: React.FC = () => {
                 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               {/* Image */}
-              <div className="relative h-48 w-full overflow-hidden">
+              <div className="relative h-38 w-full overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}

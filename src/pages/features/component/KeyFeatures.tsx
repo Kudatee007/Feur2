@@ -5,7 +5,7 @@ const features = [
     id: 1,
     title: "Flexible Booking",
     desc: "Book instantly or schedule ahead for any occasion. Whether you need a driver in 5 minutes or 5 days, Feur has you covered.",
-    image: "/flexibleBook.svg",
+    image: "/flexibleBook.webp",
     points: [
       "Instant booking in under 60 seconds",
       "Schedule rides up to 30 days in advance",
@@ -18,7 +18,7 @@ const features = [
     id: 2,
     title: "Professional Drivers",
     desc: "Every driver is thoroughly vetted, trained, and professional. Experience service that exceeds expectations every time.",
-    image: "/features-professional-driver.svg",
+    image: "/features-professional-driver.webp",
     points: [
       "Comprehensive background checks",
       "Minimum 3 years professional experience",
@@ -30,7 +30,7 @@ const features = [
     id: 3,
     title: "Real-Time Tracking",
     desc: "Know exactly where your driver is with live GPS tracking. Share your trip with loved ones for added peace of mind.",
-    image: "/realTime.svg",
+    image: "/realTime.webp",
     points: [
       "Live GPS tracking during the entire trip",
       "Share trip details with trusted contacts",
@@ -42,7 +42,7 @@ const features = [
     id: 4,
     title: "Price Bargaining",
     desc: "Negotiable and fair pricing. See the exact cost upfront, negotiate and pay securely through the app.",
-    image: "/priceBargain.svg",
+    image: "/priceBargain.webp",
     points: [
       "Clear pricing before you book",
       "Bargain fare",

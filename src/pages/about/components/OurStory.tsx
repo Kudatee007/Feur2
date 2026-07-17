@@ -4,10 +4,10 @@ import missionIcon from "../../../assets/icons/missionIcon.svg";
 
 const OurStory: React.FC = () => {
   return (
-    <section className="bg-[#F1F9FB] py-10">
-      <div className="mx-auto">
+    <section className="bg-[#F1F9FB]">
+      <div className="mx-auto ">
         {/* STORY */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center justify-center pt-10 px-5 lg:px-22 xl:px-36">
+        <div className="flex flex-col lg:flex-row gap-16 items-center justify-center pt-10 py-5 lg:py-10 px-5 lg:px-22 xl:px-36">
           {/* Left — Text */}
           <div className="flex-1">
             <div className="text-center lg:text-left mb-6">
