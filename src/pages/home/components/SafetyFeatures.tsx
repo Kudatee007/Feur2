@@ -17,7 +17,7 @@ const SafetyFeatures: React.FC = () => {
           {/* LEFT: Image */}
           <div className="flex justify-center lg:justify-start flex-shrink-0">
             <img
-              src="/safetyImage.webp"
+              src="/safety-shield.png"
               alt="Safety features"
               className="w-44 md:w-[342px] h-auto
                 drop-shadow-[0_16px_32px_rgba(56,148,163,0.2)]"

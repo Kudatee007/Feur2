@@ -1,6 +1,12 @@
 import { AiFillCheckCircle } from "react-icons/ai";
 import FaqAccordion from "../../components/ui/FaqAccordion";
 import { Helmet } from "react-helmet-async";
+import car from "../../assets/icons/car.svg";
+import service from "../../assets/icons/service.svg";
+import maintain from "../../assets/icons/maintain.svg";
+import fuel from "../../assets/icons/fuel.svg";
+import insure from "../../assets/icons/insure.svg";
+import depreciate from "../../assets/icons/depreciate.svg";
 
 const features = [
   {
@@ -47,133 +53,37 @@ const features = [
 const ownershipCosts = [
   {
     id: 1,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h8l2-2zM13 16l2-5h3l2 5H13z"
-        />
-      </svg>
-    ),
+    icon: car,
     title: "Car purchase costs",
     desc: "No need to have a car",
   },
   {
     id: 2,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-        />
-      </svg>
-    ),
+    icon: service,
     title: "Vehicle servicing costs",
     desc: "No need to spend money on servicing a vehicle",
   },
   {
     id: 3,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
+    icon: maintain,
     title: "Maintenance expenses",
     desc: "No need for car maintenance",
   },
   {
     id: 4,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3 10h2l1 2h13l1-3H6M7 17a1 1 0 100 2 1 1 0 000-2zm10 0a1 1 0 100 2 1 1 0 000-2z"
-        />
-      </svg>
-    ),
+    icon: fuel,
     title: "Fuel for your vehicle",
     desc: "No need to buy fuel",
   },
   {
     id: 5,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
-      </svg>
-    ),
+    icon:insure,
     title: "Personal vehicle insurance",
     desc: "No need for personal vehicle insurance",
   },
   {
     id: 6,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
-        />
-      </svg>
-    ),
+    icon:depreciate,
     title: "Depreciation worries",
     desc: "No more worrying about depreciating of your car and income",
   },
@@ -424,7 +334,7 @@ const ForDrivers = () => {
                 {/* Icon + NO badge */}
                 <div className="flex items-end justify-between w-full">
                   <div className="w-17 h-13 rounded-xl bg-linear-to-br from-[#3894A3] to-[#056170] flex items-center justify-center shrink-0">
-                    {item.icon}
+                    <img src={item.icon} alt={item.title} className="w-6 h-6" />
                   </div>
                   <span className="hidden sm:flex items-center gap-1 bg-[#2F414F] text-[#5EE0C0] text-[14px] font-semibold px-2.5 py-1 rounded-full">
                     <svg
@@ -590,7 +500,7 @@ const ForDrivers = () => {
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
-            <div className="inline-flex items-center bg-[#2F414F] text-white text-base sm:text-xl lg:text-[26px] font-semibold px-6 py-3 lg:px-8 lg:py-3.5 rounded-full mb-4">
+            <div className="inline-flex items-center bg-[#2F414F] text-white text-base sm:text-xl lg:text-[24px] font-semibold px-6 py-3 lg:px-8 lg:py-3.5 rounded-full mb-4">
               Driver FAQs
             </div>
             <p className="text-[15px] sm:text-lg lg:text-xl text-[#364153]">

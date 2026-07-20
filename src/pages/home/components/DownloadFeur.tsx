@@ -1,4 +1,3 @@
-import { Apple, Play } from "lucide-react";
 import downloadFeurIcon from "../../../assets/icons/download-feur-icon.svg";
 
 const DownloadFeur = () => {
@@ -8,12 +7,12 @@ const DownloadFeur = () => {
       <div className="absolute -top-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto">
-            {/* Icon */}
-            <div className="mb-6 flex justify-center">
-              <div className="w-16 h-12 rounded-xl bg-linear-to-br from-[#2F414F] to-[#000E1C] flex items-center justify-center">
-            <img src={downloadFeurIcon} alt="download" className="h-10 w-10"/>
-              </div>
-            </div>
+        {/* Icon */}
+        <div className="mb-6 flex justify-center">
+          <div className="w-16 h-12 rounded-xl bg-linear-to-br from-[#2F414F] to-[#000E1C] flex items-center justify-center">
+            <img src={downloadFeurIcon} alt="download" className="h-10 w-10" />
+          </div>
+        </div>
         <div className="flex flex-col lg:flex-row items-center justify-around gap-12 lg:gap-0">
           {/* LEFT — Content */}
           <div className="max-w-xl text-center lg:text-left">
@@ -30,20 +29,20 @@ const DownloadFeur = () => {
 
             {/* Store buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-black text-white shadow-lg hover:opacity-90 transition">
-                <Apple className="w-5 h-5" />
-                <div className="flex flex-col leading-tight text-left">
-                  <span className="text-xs">Download on the</span>
-                  <span className="text-base font-medium">App Store</span>
-                </div>
+              <button className="hover:opacity-90 transition">
+                <img
+                  src="/appstorelogo.svg"
+                  alt="Download Feur"
+                  className="w-full h-full max-h-[76px]"
+                />
               </button>
 
-              <button className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-black text-white shadow-lg hover:opacity-90 transition">
-                <Play className="w-5 h-5" />
-                <div className="flex flex-col leading-tight text-left">
-                  <span className="text-xs">Get it on</span>
-                  <span className="text-base font-medium">Google Play</span>
-                </div>
+              <button className="hover:opacity-90 transition">
+                <img
+                  src="/googlepay.svg"
+                  alt="Download Feur"
+                  className="w-full h-full max-h-[76px]"
+                />
               </button>
             </div>
           </div>

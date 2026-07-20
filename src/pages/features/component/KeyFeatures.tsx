@@ -18,7 +18,7 @@ const features = [
     id: 2,
     title: "Professional Drivers",
     desc: "Every driver is thoroughly vetted, trained, and professional. Experience service that exceeds expectations every time.",
-    image: "/features-professional-driver.webp",
+    image: "/professional-driver.webp",
     points: [
       "Comprehensive background checks",
       "Minimum 3 years professional experience",
@@ -68,7 +68,7 @@ const KeyFeatures = () => {
         </div>
 
         {/* Features */}
-        <div className="space-y-20">
+        <div className="space-y-16 lg:space-y-20">
           {features.map((feature, index) => {
             const isReversed = index % 2 !== 0;
             return (

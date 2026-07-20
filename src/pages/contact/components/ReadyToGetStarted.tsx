@@ -2,7 +2,7 @@ export default function ReadyToGetStarted() {
   return (
     <section className="bg-[#2F414F] py-20 px-4">
       <div className="max-w-4xl mx-auto text-center text-white">
-        {/* Eyebrow */}
+        <img src="/ready.svg" alt="ready" className="w-[84px] h-[62px] mx-auto mb-[40px]" />
         <p className="text-xs uppercase tracking-wide text-slate-300 mb-2">
           Ready to Get Started?
         </p>
