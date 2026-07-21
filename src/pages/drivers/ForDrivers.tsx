@@ -7,6 +7,7 @@ import maintain from "../../assets/icons/maintain.svg";
 import fuel from "../../assets/icons/fuel.svg";
 import insure from "../../assets/icons/insure.svg";
 import depreciate from "../../assets/icons/depreciate.svg";
+import DriversHero from "../../components/hero/DriversHero";
 
 const features = [
   {
@@ -15,7 +16,7 @@ const features = [
     tag: "EARN MORE",
     title: "Keep 65% of Every Trip",
     desc: "Earn more from every completed booking while Feur handles customer acquisition, bookings, and platform support. You focus on driving.",
-    image: "/features-earn-more.jpg",
+    image: "/fimg.webp",
     points: ["65% of every fare is yours", "No customer-hunting or marketing"],
   },
   {
@@ -77,13 +78,13 @@ const ownershipCosts = [
   },
   {
     id: 5,
-    icon:insure,
+    icon: insure,
     title: "Personal vehicle insurance",
     desc: "No need for personal vehicle insurance",
   },
   {
     id: 6,
-    icon:depreciate,
+    icon: depreciate,
     title: "Depreciation worries",
     desc: "No more worrying about depreciating of your car and income",
   },
@@ -181,37 +182,10 @@ const ForDrivers = () => {
         <link rel="canonical" href="https://usefeur.com/drivers" />
       </Helmet>
       {/* hero section */}
-      <section
-        className="text-center flex flex-col lg:flex-row items-center lg:justify-between py-10 px-4 sm:px-8 lg:px-22 gap-8
-           bg-cover bg-center bg-no-repeat min-h-[92vh] bg-[url('/for-drivers.webp')]"
-      >
-        <div className="space-y-6 flex flex-col items-center lg:items-start lg:max-w-4xl px-4">
-          <span className="text-[12px] font-bold text-[#5EA9B5]">
-            DRIVE WITH FEUR
-          </span>
-          <h1 className="text-[32px] sm:text-5xl lg:text-[73px] text-white font-bold lg:text-start leading-10 sm:leading-[60px] lg:leading-[90px]">
-            Turn Your Driving Skills Into Income
-          </h1>
-          <p className="text-[#F1F9FB] text-[17px] sm:text-2xl font-normal lg:text-start mb-[18px] leading-6 lg:leading-12">
-            You don't need to own a car to earn with Feur.
-          </p>
-          <p className="text-[#C7DAD4] text-sm sm:text-lg  font-normal lg:text-start mb-4 leading-7 ">
-            Whether you’re looking for full-time work or additional income, Feur
-            gives you access to customers while you focus on what you do best —
-            driving.
-          </p>
-
-          <button className="text-white text-base bg-[#3894A3] mt-4 h-14 rounded-full flex items-center justify-center gap-2 w-full max-w-[338px] hover:bg-[#327d8a] transition-colors">
-            Become a Driver →
-          </button>
-        </div>
-
-        <img
-          src="/for-drivers(2).webp"
-          alt="Driver holding steering wheel and smiling"
-          className="w-full max-w-60 sm:w-full sm:min-w-[490px] sm:h-full rounded-xl self-center"
-        />
-      </section>
+      <DriversHero
+        image="/for-drivers.webp"
+        backgroundImage="/forDrivers.svg"
+      />
 
       {/* why join feur */}
       <section className="bg-[#F1F9FB] py-16">
@@ -237,7 +211,7 @@ const ForDrivers = () => {
                   className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-20 items-center"
                 >
                   {/* Image */}
-                  <div className={`${isReversed ? "md:order-2" : ""}`}>
+                  <div className={`${!isReversed ? "md:order-2" : ""}`}>
                     <div className="rounded-2xl overflow-hidden aspect-4/3 w-full">
                       <img
                         src={feature.image}

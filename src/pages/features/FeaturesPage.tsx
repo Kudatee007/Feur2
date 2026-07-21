@@ -19,7 +19,7 @@ const FeaturesPage = () => {
         title="Features That Make Driving Simple"
         subtitle="Discover why thousands of car owners across Africa trust Feur for their professional driving needs."
         image="/featuresImage.webp"
-        backgroundImage="/featureHeroBg.svg"
+        backgroundImage="/forDrivers.svg"
       />
 
       <KeyFeatures />

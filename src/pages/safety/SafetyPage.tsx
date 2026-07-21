@@ -19,7 +19,7 @@ const SafetyPage = () => {
       <Hero
         title="Safety & Trust"
         subtitle="At Feur, your safety isn't just a feature, it's our foundation. We've built a comprehensive safety ecosystem that protects every journey, verifies every driver, and gives you complete peace of mind from the moment you request a driver to when you reach your destination."
-        image="/safetmage.webp"
+        image="/features-safety.jpg"
         backgroundImage="/safetyHeroBg.webp"
       />
 
