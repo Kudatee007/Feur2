@@ -9,6 +9,9 @@ import FeaturesPage from "./pages/features/FeaturesPage";
 import SafetyPage from "./pages/safety/SafetyPage";
 import ContactPage from "./pages/contact/ContactPage";
 import DriversPage from "./pages/drivers/ForDrivers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import DriverTerms from "./pages/DriverTerms";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
             <Route path="/safety" element={<SafetyPage />} />
             <Route path="/drivers" element={<DriversPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/driver-terms" element={<DriverTerms />} />
           </Route>
         </Routes>
       </Router>

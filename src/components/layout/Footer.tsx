@@ -34,11 +34,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div>
             <Link to="/" aria-label="Go to home">
-              <img
-                src={feurLogo}
-                alt="Feur logo"
-                className="h-12 w-9 mb-4"
-              />
+              <img src={feurLogo} alt="Feur logo" className="h-12 w-9 mb-4" />
             </Link>
 
             <p className="text-base text-white/80 leading-relaxed max-w-sm">
@@ -70,9 +66,7 @@ const Footer: React.FC = () => {
               {footerNav.map((item) => (
                 <li key={item.id}>
                   <button
-                    onClick={() =>
-                      handleFooterNav(item.path, item.sectionId)
-                    }
+                    onClick={() => handleFooterNav(item.path, item.sectionId)}
                     className="hover:text-white transition text-left"
                   >
                     {item.label}
@@ -119,9 +113,24 @@ const Footer: React.FC = () => {
           <p className="text-base">© 2026 Feur. All rights reserved.</p>
 
           <div className="flex gap-6 md:text-base">
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
-            <Link to="/driver-terms">Driver Terms</Link>
+            <Link
+              to="/privacy"
+              className="hover:text-[#3894A3] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms"
+              className="hover:text-[#3894A3] transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              to="/driver-terms"
+              className="hover:text-[#3894A3] transition-colors"
+            >
+              Driver Terms
+            </Link>
           </div>
         </div>
       </div>

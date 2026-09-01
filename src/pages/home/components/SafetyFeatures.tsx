@@ -32,7 +32,7 @@ const SafetyFeatures: React.FC = () => {
               Safety Features
             </span>
 
-            {/* Heading — fixed typo: font-meduim → font-semibold */}
+            {/* Heading — fixed */}
             <h2 className="text-2xl md:text-3xl font-semibold text-[#2F414F]
               max-w-xs mx-auto lg:max-w-full">
               We&apos;re committed to{" "}

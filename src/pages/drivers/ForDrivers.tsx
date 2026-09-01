@@ -7,6 +7,7 @@ import maintain from "../../assets/icons/maintain.svg";
 import fuel from "../../assets/icons/fuel.svg";
 import insure from "../../assets/icons/insure.svg";
 import depreciate from "../../assets/icons/depreciate.svg";
+import steering from "../../assets/icons/steering-icon.svg";
 import DriversHero from "../../components/hero/DriversHero";
 
 const features = [
@@ -359,7 +360,7 @@ const ForDrivers = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header pill + title + desc */}
           <div className="mb-7">
-            <div className="inline-flex items-center bg-[#2F414F] text-white text-lg xl:text-[26px] font-semibold px-6 py-2.5 xl:px-[34px] xl:py-3.5 rounded-full mb-3 md:mb-6">
+            <div className="w-fit mx-auto lg:mx-0 bg-[#2F414F] text-white text-lg xl:text-[26px] font-semibold px-6 py-2.5 xl:px-[34px] xl:py-3.5 rounded-full mb-3 md:mb-6">
               Multiple Ways to Earn
             </div>
             <p className="text-[#4B5563] text-base xl:text-xl max-w-4xl leading-relaxed">
@@ -484,6 +485,29 @@ const ForDrivers = () => {
 
           <FaqAccordion items={driverFaqs} />
         </div>
+      </section>
+
+      <section className="py-13 md:py-16 lg:py-24 px-6 bg-[#3894A3] text-center">
+        <img
+          src={steering}
+          alt="steering"
+          className="w-[84px] h-full mx-auto pb-9 lg:pb-10"
+        />
+        <h4 className="text-[27px] sm:text-[32px] lg:text-[40px] font-bold leading-8 text-white pb-4 md:pb-5">
+          Start Earning with Feur
+        </h4>
+        <p className="text-[15px] sm:text-base md:text-lg lg:text-xl font-normal leading-5.5 md:leading-7.5 text-[#EAFAFC] pb-4 md:pb-5 max-w-2xl mx-auto">
+          Your driving skills are valuable. Join Feur today and connect with
+          passengers looking for reliable, professional drivers.
+        </p>
+        <div className="bg-[#2F414F] rounded-[14px] w-[300px] mx-auto px-5 py-3.5 mb-5">
+          <span className="text-[18px] font-bold text-white">
+            Drive More. Earn More. <span className="lg:hidden">Keep 65%.</span>
+          </span>
+        </div>
+        <button className="bg-white hover:bg-white/80 text-[#2F414F] font-semibold w-full sm:w-fit lg:px-10 lg:py-5 px-8 py-[15px] rounded-full transition-colors text-base md:text-lg whitespace-nowrap">
+          Become a Driver →
+        </button>
       </section>
     </div>
   );

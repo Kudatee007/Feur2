@@ -9,8 +9,23 @@ import { scrollToSection } from "../../utils/scrollToSection";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  // 2. Monitor scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -36,9 +51,23 @@ const Header = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-40 bg-white sm:relative">
-      {/* Top bar */}
-      <div className="flex justify-between lg:justify-around items-center px-5 py-3 bg-white shadow-sm">
+    <nav
+      className={`
+        sticky top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out
+        ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-md translate-y-0"
+            : "bg-white translate-y-0"
+        }
+      `}
+    >
+      {/* Dynamic padding inside top bar to shrink the header when scrolled */}
+      <div
+        className={`
+          flex justify-between lg:justify-around items-center px-5 bg-transparent transition-all duration-300
+          ${isScrolled ? "py-2" : "py-4 lg:py-5"}
+        `}
+      >
         {/* Logo */}
         <NavLink to="/" aria-label="Go to home">
           <img
@@ -74,32 +103,21 @@ const Header = () => {
           Download App
         </button>
 
-        {/* Mobile hamburger */}
+        {/* Mobile menu toggle button */}
         <button
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-          className="lg:hidden"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          className="lg:hidden z-50 text-[#2F414F]"
         >
-          <RxHamburgerMenu size={24} />
+          {open ? <MdClose size={24} /> : <RxHamburgerMenu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="fixed inset-0 z-40 bg-white p-5">
-          {/* Header */}
-          <div className="flex justify-between items-center mb-8">
-            <img src={feurLogo} alt="Feur logo" />
-            <button
-              onClick={() => setOpen(false)}
-              aria-label="Close menu"
-            >
-              <MdClose size={24} />
-            </button>
-          </div>
-
+        <div className="fixed inset-0 z-100 bg-white mt-20">
           {/* Mobile nav items */}
-          <ul className="space-y-4">
+          <ul className="space-y-4 bg-white lg:hidden p-5">
             {mobileNav.map((item) => {
               const isActive = location.pathname === item.path;
 
@@ -128,9 +146,7 @@ const Header = () => {
               return (
                 <li key={item.id}>
                   <button
-                    onClick={() =>
-                      handleNav(item.path, item.sectionId)
-                    }
+                    onClick={() => handleNav(item.path, item.sectionId)}
                     className={`
                       w-full text-left px-6 py-5 rounded-2xl
                       text-lg font-medium
